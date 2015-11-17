@@ -1,0 +1,46 @@
+{
+	"staff":{
+
+		"mike":{
+		  "name": "Mike Sares",
+		  "pic":"mike.jpg",
+		  "title": "Pastor",
+		  "email": "mike.sares@scumoftheearth.net",
+		  "donateLink": "https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=ryszTdvttIoj9sL5O8nwzF5xIKB450Ml_ot6pQYXaZPoJ1vfz8mpZG_s5uC&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		},
+		"jesse":{
+			"name":"Jesse Heilmann",
+			"pic":"jesse.jpg",
+			"title": "Staff",
+			"email": "jesse.heilmann@scumoftheearth.net",
+			"donateLink": "https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=UwU4vXvisvM79U_tuF1jsCVBaLd9822roLmMdO8LTPc4URuQjbYp_oCoi-W&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		},
+		"jessi":{
+			"name": "Jessi Heilmann",
+			"pic":"jessi.jpg",
+			"title": "Staff",
+			"email": "jessi.heilmann@scumoftheearth.net",
+			"donateLink": "https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=mdKZh5iUPKE6YVq5XZjlbC4EQ28sgeEb7Mdli1OLi8cMhbqTjgRpZlPmjtm&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		},
+		"leanor":{
+			"name": "Leanor Inez Ortega-Till",
+			"pic":"leanor.jpg",
+			"title":"Arts Pastor",
+			"email":"leanor.ortegatill@scumoftheearth.net",
+			"donateLink":"https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=v-C0pEyI-5fqlDRJaQcIfc3gwxQMxynAPldzy_tItbyfanj2iz8H4qixjXS&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		},
+		"fran":{
+			"name":"Fran Blomberg",
+			"pic":"fran.jpg",
+			"title":"Staff",
+			"email":"",
+			"donateLink":"https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=o6m4SgisFhmbZMm76ag40cEnVF4tR93JGl8HTy5chuwORgxC0PI2d9-mk8i&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		}
+	}
+
+	"scoop":{
+	
+	}
+
+
+}
