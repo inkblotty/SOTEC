@@ -55,6 +55,93 @@
 		  	"facebook": ""
 		  },
 			"donateLink":"https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=o6m4SgisFhmbZMm76ag40cEnVF4tR93JGl8HTy5chuwORgxC0PI2d9-mk8i&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		},
+		"dave":{
+			"name":"Dave Wetherby",
+			"pic":"images/dave.jpg",
+			"title":"Robot Master",
+			"contact":{
+		    "email": "dave.wetherby@scumoftheearth.net",
+		  	"twitter": "",
+		  	"facebook": ""
+		  },
+			"donateLink":"https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=e5hie2fMgp-rPt1UJrzmdztnSmabfpJa2LpXcor9YwOOOpC7UfqdT7XsgYK&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		},
+		"zach":{
+			"name":"Zach McCauley",
+			"pic":"images/zach.jpg",
+			"title":"Paster, SOTEC Seattle",
+			"contact":{
+		    "email": "",
+		  	"twitter": "",
+		  	"facebook": ""
+		  },
+		  "donateLink":"https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=NRPymio4bJLbt1jIvMK9Dt7AaFXLghaTbZNLvTtEHHfgIm-Q8jh0fC2Gtw0&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		},
+		"kristi":{
+			"name":"Kristi Spitzer",
+			"pic":"images/kristi.jpg",
+			"title":"Women's Ministry & Admin. Assistant",
+			"contact":{
+		    "email": "",
+		  	"twitter": "",
+		  	"facebook": ""
+		  },
+		  "donateLink":"https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=bNNWrTKuob7J4xIzl41Cx8fmBg5Vsy7cztG_uNZvnSg8bwxfTe8q-p96Hhe&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		},
+		"adam":{
+			"name":"Adam Skinner",
+			"pic":"images/adam.jpg",
+			"title":"Staff",
+			"contact":{
+		    "email": "adam.skinner@scumoftheearth.net",
+		  	"twitter": "",
+		  	"facebook": ""
+		  },
+		  "donateLink":"https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=usHhT2eewxiX0TWom61OXXZ0ofexSqz3Zpj9CgC93k-XklN8GvJXyxCGj0q&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		},
+		"cathy":{
+			"name":"Cathy Pence",
+			"pic":"images/cathy.jpg",
+			"title":"Children's Pastor",
+			"contact":{
+		    "email": "",
+		  	"twitter": "",
+		  	"facebook": ""
+		  },
+		  "donateLink":"https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=mX88-q_S6BL5zhNgB9bgITn4brfiPL9rt9iC0b6AenRvoTO9vBBNG2tV55K&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		},
+		"nathan":{
+			"name":"Nathan McGarvey",
+			"pic":"images/nathan.jpg",
+			"title":"Study Center Staff",
+			"contact":{
+		    "email": "",
+		  	"twitter": "",
+		  	"facebook": ""
+		  },
+		  "donateLink":"https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=hf2RfMopaiMgze_OZ2CaTtk_2Pyy603R_HonrfD_y_aQ6jDHZApbczvwctO&dispatch=5885d80a13c0db1f8e263663d3faee8d64ad11bbf4d2a5a1a0d303a50933f9b2"
+		},
+		"steve":{
+			"name":"Steve Granado",
+			"pic":"",
+			"title":"Men's Ministry",
+			"contact":{
+				"email":"",
+				"twitter":"",
+				"facebook":""
+			}
+		}
+		"":{
+			"name":"",
+			"pic":"images/.jpg",
+			"title":"Staff",
+			"contact":{
+		    "email": "",
+		  	"twitter": "",
+		  	"facebook": ""
+		  },
+		  "donateLink":""
 		}
 	}
 
