@@ -101,7 +101,7 @@ gulp.task('browser-sync', function(){
   gulp.watch('./src/scripts/*/*.js', ['jshint', 'scripts']).on('change', browserSync.reload);
 });
 
-// build task
+// build task -- incomplete
 gulp.task('finalBuild', ['htmlpage', 'styles', 'imagemin', 'finalScripts']);
 
 // default task

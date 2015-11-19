@@ -11,20 +11,23 @@
 	<link rel="stylesheet" href="styles/styles.css">
 
 	<!-- External Libraries -->
-	<script src="scripts/libraries/angular.min.js"></script>
+	<script src="./scripts/libraries/angular.min.js"></script>
 </head>
 <body ng-app="scummyApp">
 	Hello
 
 	<div ng-controller="dataCtrl as jsonData">
-		{{ jsonData.monkey }} -- <span>is a color</span>
+		{{ jsonData.monkey }} <span> is a color</span>
 
-		<div class="staff-container" ng-repeat="person in jsonData.staff">
+		<div class="staff-container" style="border:1px solid red; height: 20px; width: 50px" ng-repeat="person in jsonData.data.staff">
+			<p>A thing</p>
+			<p>{{ jsonData.data.staff }}</p>
 			<p>{{ person.name }}</p>
 			<p>{{ person.title }}</p>
 		</div>
 
   </div>
 	
+	<script src="./scripts/script.js"></script>
 </body>
 </html>
