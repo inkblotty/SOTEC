@@ -12,6 +12,7 @@ var autoprefix = require('gulp-autoprefixer'), // automatically adds vender pref
 	jshint = require('gulp-jshint'),
 	minifyCSS = require('gulp-minify-css'),
 	minifyHTML = require('gulp-minify-html'),
+	ngAnnotate = require('gulp-ng-annotate'),
 	reload = browserSync.reload;
 	sass = require('gulp-sass'),
 	stripDebug = require('gulp-strip-debug'), // removes console and debug statements
@@ -46,19 +47,31 @@ gulp.task('htmlpage', function() {
 		.pipe(gulp.dest(htmlDst));
 });
 
+// move json data -- not working
+gulp.task('moveJSON', function(){
+	gulp.src('./src/*.json')
+		.pipe(gulp.dest('./build/'));
+});
+
 // JS concat -- just for debugging
 gulp.task('scripts', function() {
-	gulp.src(['./src/scripts/lib.js', './src/scripts/*.js'])
+  gulp.src(['./src/scripts/libraries/angular.min.js', './src/scripts/libraries/*.js'])
+		.pipe(gulp.dest('./build/scripts/libraries/'));
+	gulp.src(['./src/scripts/app.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', './src/scripts/directives/*.js', './src/scripts/filters/*.js', '.src/scripts/*.js'])
+		.pipe(ngAnnotate())
 		.pipe(concat('script.js'))
 		.pipe(gulp.dest('./build/scripts/'));
 });
 
 // JS concat, strip debugging, and uglify -- for final build
 gulp.task('finalScripts', function(){
-	gulp.src(['./src/scripts/lib.js', './src/scripts/*.js'])
-	  .pipe(concat('script.js'))
+  gulp.src(['./src/scripts/libraries/angular.min.js', './src/scripts/libraries/*.js'])
+		.pipe(gulp.dest('./build/scripts/libraries/'));
+	gulp.src(['./src/scripts/app.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', './src/scripts/directives/*.js', './src/scripts/filters/*.js', '.src/scripts/*.js'])	  .pipe(concat('script.js'))
+	  .pipe(ngAnnotate())
 	  .pipe(strigDebug())
 	  .pipe(uglify())
+	  .concat('script.js')
 	  .pipe(gulp.dest('./build/scripts/'));
 });
 
@@ -81,9 +94,11 @@ gulp.task('browser-sync', function(){
         },
   notify: false
   });
+  gulp.watch('./src/*.json', ['moveJSON']).on('change', browserSync.reload);
   gulp.watch('./src/*.html', ['htmlpage']).on('change', browserSync.reload);
   gulp.watch('./src/styles/*.scss', ['styles']).on('change', browserSync.reload);
   gulp.watch('./src/scripts/*.js', ['jshint', 'scripts']).on('change', browserSync.reload);
+  gulp.watch('./src/scripts/*/*.js', ['jshint', 'scripts']).on('change', browserSync.reload);
 });
 
 // build task

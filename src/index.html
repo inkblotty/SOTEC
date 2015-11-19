@@ -2,10 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Scum of the Earth Church</title>
+
+	<!-- Fonts -->
+
+	<!-- Styles -->
 	<link rel="stylesheet" href="styles/styles.css">
+
+	<!-- External Libraries -->
+	<script src="scripts/libraries/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="scummyApp">
+	Hello
+
+	<div ng-controller="dataCtrl as jsonData">
+		{{ jsonData.monkey }} -- <span>is a color</span>
+
+		<div class="staff-container" ng-repeat="person in jsonData.staff">
+			<p>{{ person.name }}</p>
+			<p>{{ person.title }}</p>
+		</div>
+
+  </div>
 	
 </body>
 </html>
