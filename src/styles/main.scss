@@ -1,10 +1,16 @@
 // main styles
+@import '_extensions';
+
 body{
 	width: 100%;
-	.container{
-		width: 80%;
-	}
-	p{
-		color: orange;
-	}
+}
+
+.staff-container{
+	max-width: 100%;
+}
+
+.person-container{
+	border: 1px solid red;
+	margin: 2%;
+	width: 100px;
 }

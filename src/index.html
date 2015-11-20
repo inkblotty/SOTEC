@@ -6,6 +6,7 @@
 	<title>Scum of the Earth Church</title>
 
 	<!-- Fonts -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="styles/styles.css">
@@ -17,10 +18,19 @@
 
 	<div ng-controller="dataCtrl as jsonData">
 
-		<div class="staff-container" ng-repeat="person in jsonData.data.staff" style="border: 1px solid blue;">
-			<img src="{{ person.pic }}">
-			<div class="person-name">{{ person.name }}</div>
-			<div class="job-title">{{ person.title }}</div>
+		<div class="staff-container flex-col">
+			<div class="person-container col" ng-repeat="person in jsonData.data.staff">
+				<img src="{{ person.pic }}">
+				<div class="person-name">{{ person.name }}</div>
+				<div class="job-title">{{ person.title }}</div>
+
+				<div class="contact-container">
+					<a href="{{ person.contact.email }}"><i class="fa fa-envelope-o"></i></a>
+					<a href="{{ person.contact.twitter }}"><i class="fa fa-twitter"></i></a>
+					<a href="{{ person.contact.facebook }}"><i class="fa fa-facebook"></i></a>
+				</div>
+
+		</div>
 		</div>
 
   </div>
