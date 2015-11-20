@@ -14,16 +14,13 @@
 	<script src="./scripts/libraries/angular.min.js"></script>
 </head>
 <body ng-app="scummyApp">
-	Hello
 
 	<div ng-controller="dataCtrl as jsonData">
-		{{ jsonData.monkey }} <span> is a color</span>
 
-		<div class="staff-container" style="border:1px solid red; height: 20px; width: 50px" ng-repeat="person in jsonData.data.staff">
-			<p>A thing</p>
-			<p>{{ jsonData.data.staff }}</p>
-			<p>{{ person.name }}</p>
-			<p>{{ person.title }}</p>
+		<div class="staff-container" ng-repeat="person in jsonData.data.staff" style="border: 1px solid blue;">
+			<img src="{{ person.pic }}">
+			<div class="person-name">{{ person.name }}</div>
+			<div class="job-title">{{ person.title }}</div>
 		</div>
 
   </div>

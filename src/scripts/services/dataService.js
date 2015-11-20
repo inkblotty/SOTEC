@@ -1,7 +1,7 @@
 // staff service -- gets json data
 
 app.factory('dataServ', ['$http', function($http) {
-	return $http.get('./../../info.json')
+	return $http.get('http://localhost:3000/info.json')
 	.success(function(data) {
 		return data;
 	})
@@ -9,3 +9,4 @@ app.factory('dataServ', ['$http', function($http) {
 		return err;
 	});
 }]);
+
