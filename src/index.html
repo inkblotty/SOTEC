@@ -10,6 +10,7 @@
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="styles/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
 	<!-- External Libraries -->
 	<script src="./scripts/libraries/angular.min.js"></script>
@@ -18,7 +19,7 @@
 
 	<div ng-controller="dataCtrl as jsonData">
 
-		<div class="staff-container flex-col">
+		<div class="staff-container flex">
 			<div class="person-container col" ng-repeat="person in jsonData.data.staff">
 				<img src="{{ person.pic }}">
 				<div class="person-name">{{ person.name }}</div>

@@ -2,6 +2,7 @@
 @import '_extensions';
 
 body{
+	font-family: 'Open Sans', sans-serif;
 	width: 100%;
 }
 
@@ -11,6 +12,9 @@ body{
 
 .person-container{
 	border: 1px solid red;
-	margin: 2%;
-	width: 100px;
+	margin: 1%;
+	padding: 1%;
+	text-align: center;
+	width: 25%;
 }
+
