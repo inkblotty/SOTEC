@@ -8,7 +8,7 @@ var autoprefix = require('gulp-autoprefixer'), // automatically adds vender pref
   browserSync = require('browser-sync'),
 	changed = require('gulp-changed'), // checks to see what needs updating -- only the changed files
 	concat = require('gulp-concat'),
-	/*imagemin = require('gulp-imagemin'),*/
+	imagemin = require('gulp-imagemin'),
 	jshint = require('gulp-jshint'),
 	minifyCSS = require('gulp-minify-css'),
 	minifyHTML = require('gulp-minify-html'),
@@ -26,7 +26,7 @@ gulp.task('jshint', function() {
 });
 
 // minify new images
-/*
+
 gulp.task('imagemin', function() {
 	var imgSrc = './src/images/*',
 		imgDst = './build/images';
@@ -36,7 +36,7 @@ gulp.task('imagemin', function() {
 		.pipe(imagemin())
 		.pipe(gulp.dest(imgDst));
 });
-*/
+
 
 // minify html
 gulp.task('htmlpage', function() {
