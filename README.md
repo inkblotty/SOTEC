@@ -15,3 +15,7 @@ SOTEC website redesign
   * redesign to be grid of profile pictures with names
      - details expand into popOver on click
   * new captions needed for staff, list of who to include and what titles
+
+- Calendar
+  * ideally stand-alone -- not linked to google account
+  * list upcoming events on main page with full calendar elsewhere
