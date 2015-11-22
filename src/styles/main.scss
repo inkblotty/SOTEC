@@ -2,9 +2,23 @@
 @import '_extensions';
 
 body{
-	background-image: url('images/bwBackground.png');
+	background-image: url("../images/bwBackground.png");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
 	font-family: 'Open Sans', sans-serif;
-	width: 100%;
+	width: 99%;
+}
+
+header{
+	color: #fff;
+	font-weight: 300;
+	margin: 24% auto;
+	text-align: center;
+
+	h1{
+		text-transform: uppercase;
+	}
 }
 
 .staff-container{
