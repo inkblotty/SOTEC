@@ -1,17 +1,20 @@
 // main styles
 @import '_extensions';
 
+$mainWhite:rgb(223,209,207);
+$medRed: rgb(127,20,8);
+
 body{
 	background-image: url("../images/bwBackground.png");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: 100% auto;
+	background-size: 100vw auto;
 	font-family: 'Open Sans', sans-serif;
 	width: 99%;
 }
 
 header{
-	color: #fff;
+	color: $mainWhite;
 	font-weight: 300;
 	margin: 24% auto;
 	text-align: center;
@@ -21,19 +24,33 @@ header{
 	}
 }
 
+.container{
+	background-color: $mainWhite;
+	margin-left: 10%;
+}
+
+.about-container{
+	flex-wrap: wrap;
+}
+
 .staff-container{
+	background-color: $medRed;
 	max-width: 100%;
 }
 
+
 .person-container{
 	border: 1px solid red;
+	font-size:0.9em;
 	margin: 1%;
-	padding: 1%;
+	padding: 0;
 	text-align: center;
-	width: 25%;
+	width: 13%;
 
 	img{
 		height: auto;
+		margin: 0;
+		margin-bottom: 5%;
 		width: 100%;
 	}
 }
