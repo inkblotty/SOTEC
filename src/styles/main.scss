@@ -2,7 +2,7 @@
 @import '_extensions';
 
 $mainWhite:rgb(223,209,207);
-$medRed: rgb(127,20,8);
+$medRed:rgb(127,20,8);
 
 body{
 	background-image: url("../images/bwBackground.png");
@@ -26,11 +26,17 @@ header{
 
 .container{
 	background-color: $mainWhite;
+	margin: 0;
 	margin-left: 10%;
 }
 
 .about-container{
 	flex-wrap: wrap;
+
+	.intro{
+		margin-right: 2%;
+		width: 70%;
+	}
 }
 
 .staff-container{
@@ -40,7 +46,8 @@ header{
 
 
 .person-container{
-	border: 1px solid red;
+	//border: 1px solid red;
+	color: $mainWhite;
 	font-size:0.9em;
 	margin: 1%;
 	padding: 0;
@@ -54,3 +61,4 @@ header{
 		width: 100%;
 	}
 }
+
