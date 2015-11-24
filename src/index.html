@@ -14,6 +14,7 @@
 
 	<!-- External Libraries -->
 	<script src="./scripts/libraries/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 	
 </head>
 <body ng-app="scummyApp">
@@ -44,13 +45,22 @@
 				<div class="person-container col" ng-repeat="person in jsonData.data.staff">
 					<img src="{{ person.pic }}">
 					<div class="person-name">{{ person.name }}</div>
-					<div class="job-title">{{ person.title }}</div>
-
-					<div class="contact-container">
-						<a href="{{ person.contact.email }}"><i class="fa fa-envelope-o"></i></a>
-						<a href="{{ person.contact.twitter }}"><i class="fa fa-twitter"></i></a>
-						<a href="{{ person.contact.facebook }}"><i class="fa fa-facebook"></i></a>
-						<a href="{{ person.donateLink }}"><i class="fa fa-paypal"></i></a>
+					
+					<div class="popup flex hidden">
+						<div class="pop-inside">
+								<div class="person-name">{{ person. name }}</div>
+								<div class="job-title">{{ person.title }}</div>
+								<div class="person-caption">{{ person.description }}</div>
+							<div class="col">
+								<img src="{{ person.pic }}">
+								<div class="contact-container">
+						  		<a href="{{ person.contact.email }}"><i class="fa fa-envelope-o"></i></a>
+									<a href="{{ person.contact.twitter }}"><i class="fa fa-twitter"></i></a>
+									<a href="{{ person.contact.facebook }}"><i class="fa fa-facebook"></i></a>
+									<a href="{{ person.donateLink }}"><i class="fa fa-paypal"></i></a>
+								</div>
+							</div>
+						</div>
 					</div>
 
 		  	</div>
@@ -59,6 +69,7 @@
 
   </div>
 	
-	<script src="./scripts/script.js"></script>
+	<script type="text/javascript" src="./scripts/app.js"></script>
+	<script type="text/javascript" src="./scripts/script.js"></script>
 </body>
 </html>

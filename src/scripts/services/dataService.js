@@ -9,4 +9,3 @@ app.factory('dataServ', ['$http', function($http) {
 		return err;
 	});
 }]);
-

@@ -10,6 +10,7 @@ var autoprefix = require('gulp-autoprefixer'), // automatically adds vender pref
 	concat = require('gulp-concat'),
 	imagemin = require('gulp-imagemin'),
 	jshint = require('gulp-jshint'),
+	merge = require('merge-stream'),
 	minifyCSS = require('gulp-minify-css'),
 	minifyHTML = require('gulp-minify-html'),
 	ngAnnotate = require('gulp-ng-annotate'),
@@ -55,25 +56,29 @@ gulp.task('moveJSON', function(){
 		.pipe(gulp.dest('./build/'));
 });
 
-// JS concat -- just for debugging
+// JS concat and ngAnnotate -- just for debugging
 gulp.task('scripts', function() {
-  gulp.src(['./src/scripts/libraries/angular.min.js', './src/scripts/libraries/*.js'])
-		.pipe(gulp.dest('./build/scripts/libraries/'));
-	gulp.src(['./src/scripts/app.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', './src/scripts/directives/*.js', './src/scripts/filters/*.js', '.src/scripts/*.js'])
-		.pipe(ngAnnotate())
-		.pipe(concat('script.js'))
-		.pipe(gulp.dest('./build/scripts/'));
+	var events = gulp.src(['.src/scripts/events.js'])
+								.pipe(gulp.dest('./build/scripts/'));
+  var libs = gulp.src(['./src/scripts/libraries/angular.min.js', './src/scripts/libraries/*.js'])
+								.pipe(gulp.dest('./build/scripts/libraries/'));
+	var ang = gulp.src(['./src/scripts/app.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', './src/scripts/directives/*.js', './src/scripts/filters/*.js'])
+								.pipe(ngAnnotate())
+								.pipe(concat('app.js'))
+								.pipe(gulp.dest('./build/scripts/'));
+
+	return merge(events, libs, ang);
 });
 
-// JS concat, strip debugging, and uglify -- for final build
+// JS concat, ngAnnotate, strip debugging, and uglify -- for final build
 gulp.task('finalScripts', function(){
   gulp.src(['./src/scripts/libraries/angular.min.js', './src/scripts/libraries/*.js'])
 		.pipe(gulp.dest('./build/scripts/libraries/'));
-	gulp.src(['./src/scripts/app.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', './src/scripts/directives/*.js', './src/scripts/filters/*.js', '.src/scripts/*.js'])	  .pipe(concat('script.js'))
+	gulp.src(['./src/scripts/app.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', './src/scripts/directives/*.js', './src/scripts/filters/*.js', '.src/scripts/*.js'])
 	  .pipe(ngAnnotate())
 	  .pipe(strigDebug())
 	  .pipe(uglify())
-	  .concat('script.js')
+	  .pipe(concat('script.js'))
 	  .pipe(gulp.dest('./build/scripts/'));
 });
 

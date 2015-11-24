@@ -2,7 +2,10 @@
 @import '_extensions';
 
 $mainWhite:rgb(223,209,207);
+$brightRed:rgb(217,35,13);
 $medRed:rgb(127,20,8);
+$marroon:rgb(89,35,29);
+$accentRed:166,27,10;
 
 body{
 	background-image: url("../images/bwBackground.png");
@@ -10,7 +13,12 @@ body{
 	background-repeat: no-repeat;
 	background-size: 100vw auto;
 	font-family: 'Open Sans', sans-serif;
+	margin: 0;
 	width: 99%;
+}
+
+.hidden{
+	display: none;
 }
 
 header{
@@ -48,6 +56,7 @@ header{
 .person-container{
 	//border: 1px solid red;
 	color: $mainWhite;
+	cursor: pointer;
 	font-size:0.9em;
 	margin: 1%;
 	padding: 0;
@@ -60,5 +69,31 @@ header{
 		margin-bottom: 5%;
 		width: 100%;
 	}
+
+	.popup{
+		background-color: rgba(0,0,0,0.5);
+		position: fixed;
+		top: 0;
+		width: 100vw;
+
+		img{
+			width: 30em;
+		}
+	}
 }
+/*
+,
+		{
+			"name":"",
+			"pic":"",
+			"title":"Staff",
+			"contact":{
+		    "email": "",
+		  	"twitter": "",
+		  	"facebook": ""
+		  },
+		  "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas alias fugiat eaque magni accusantium explicabo reiciendis quod rerum aliquid, eligendi quidem harum saepe praesentium distinctio ipsam eum voluptate veritatis illum?",
+		  "donateLink":""
+		}
+*/
 
