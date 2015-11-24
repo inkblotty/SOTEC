@@ -98,8 +98,8 @@ gulp.task('browser-sync', function(){
   gulp.watch('./src/*.json', ['moveJSON']).on('change', browserSync.reload);
   gulp.watch('./src/*.html', ['htmlpage']).on('change', browserSync.reload);
   gulp.watch('./src/styles/*.scss', ['styles']).on('change', browserSync.reload);
-  gulp.watch('./src/scripts/*.js', ['scripts']).on('change', browserSync.reload);
-  gulp.watch('./src/scripts/*/*.js', ['scripts']).on('change', browserSync.reload);
+  gulp.watch('./src/scripts/*.js', ['jshint', 'scripts']).on('change', browserSync.reload);
+  gulp.watch('./src/scripts/*/*.js', ['jshint', 'scripts']).on('change', browserSync.reload);
 });
 
 // build task -- incomplete
