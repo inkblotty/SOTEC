@@ -45,11 +45,13 @@
 					<img src="{{ person.pic }}">
 					<div class="person-name">{{ person.name }}</div>
 					
-					<div class="popup flex hidden">
-						<div class="pop-inside">
+					<div class="popup hidden">
+						<div class="pop-inside flex-col">
+							<div class="col">
 								<div class="person-name">{{ person. name }}</div>
 								<div class="job-title">{{ person.title }}</div>
 								<div class="person-caption">{{ person.description }}</div>
+							</div>
 							<div class="col">
 								<img src="{{ person.pic }}">
 								<div class="contact-container">

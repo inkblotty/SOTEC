@@ -82,6 +82,7 @@ header{
 
 	.popup{
 		background-color: rgba(0,0,0,0.5);
+		height: 100vh;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -89,9 +90,16 @@ header{
 
 		.pop-inside{
 			background-color: $mainWhite;
+			border-radius: 5em;
 			color: #000;
-			margin: 2% auto;
+			height: 96vh;
+			margin: 2vh auto;
 			width: 80%;
+
+			.col{
+				margin: 2%;
+				width: 50%;
+			}
 		
 			img{
 				width: 100%;
