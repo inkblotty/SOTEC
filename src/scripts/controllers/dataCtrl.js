@@ -2,11 +2,13 @@
 app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 	var jsonData = this;
 
-	var staff = document.getElementById('staff-container');
-	var people = staff.getElementsByClassName('person-container');
+	console.log('yayyy');
 
-	console.log(people.length);
-	
+
+	jsonData.popOver = function(){
+		var personCont = this.currentTarget;
+		console.log(personCont);
+	}
 
   dataServ.success(function(data) {
 		jsonData.data = data;

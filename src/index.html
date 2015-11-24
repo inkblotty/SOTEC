@@ -42,7 +42,7 @@
 		<div class="container" id="staff-container">
 			<h3 class="section-title">Staff</h3>
 			<div class="flex">
-				<div class="person-container col" ng-repeat="person in jsonData.data.staff">
+				<div class="person-container col" ng-click="jsonData.popOver()" ng-repeat="person in jsonData.data.staff">
 					<img src="{{ person.pic }}">
 					<div class="person-name">{{ person.name }}</div>
 					
