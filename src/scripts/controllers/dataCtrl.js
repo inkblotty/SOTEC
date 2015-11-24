@@ -2,12 +2,12 @@
 app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 	var jsonData = this;
 
-	console.log('yayyy');
 
+	jsonData.popOver = function(data){
+		var person = document.getElementById(data);
+		var popup = person.getElementsByClassName('popup')[0];
 
-	jsonData.popOver = function(){
-		var personCont = this.currentTarget;
-		console.log(personCont);
+		popup['classList'].remove('hidden');
 	}
 
   dataServ.success(function(data) {

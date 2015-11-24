@@ -84,10 +84,18 @@ header{
 		background-color: rgba(0,0,0,0.5);
 		position: fixed;
 		top: 0;
+		left: 0;
 		width: 100vw;
 
-		img{
-			width: 30em;
+		.pop-inside{
+			background-color: $mainWhite;
+			color: #000;
+			margin: 2% auto;
+			width: 80%;
+		
+			img{
+				width: 100%;
+			}
 		}
 	}
 }
