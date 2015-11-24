@@ -2,8 +2,13 @@
 app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 	var jsonData = this;
 
+	var staff = document.getElementById('staff-container');
+	var people = staff.getElementsByClassName('person-container');
+
+	console.log(people.length);
+	
+
   dataServ.success(function(data) {
-  	//console.log(data.staff);
 		jsonData.data = data;
 	});
 }]);

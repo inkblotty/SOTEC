@@ -28,7 +28,7 @@
 
 		<div class="about-container container flex-col">
 			<div class="col intro">
-			  <h3>{{ jsonData.data.name }}</h3>
+			  <h3 class="section-title">{{ jsonData.data.name }}</h3>
 			  <p>{{ jsonData.data.about.whyScum }}</p>
 			</div>
 			<div class="col">
@@ -39,8 +39,8 @@
 			</div>
 	  </div>
 
-		<div class="staff-container container">
-			<h3>Staff</h3>
+		<div class="container" id="staff-container">
+			<h3 class="section-title">Staff</h3>
 			<div class="flex">
 				<div class="person-container col" ng-repeat="person in jsonData.data.staff">
 					<img src="{{ person.pic }}">
@@ -70,6 +70,5 @@
   </div>
 	
 	<script type="text/javascript" src="./scripts/app.js"></script>
-	<script type="text/javascript" src="./scripts/script.js"></script>
 </body>
 </html>

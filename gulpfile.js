@@ -5,12 +5,11 @@ var gulp = require('gulp');
 
 // include plug-ins
 var autoprefix = require('gulp-autoprefixer'), // automatically adds vender prefixes
-  browserSync = require('browser-sync'),
+  browserSync = require('browser-sync').create(),
 	changed = require('gulp-changed'), // checks to see what needs updating -- only the changed files
 	concat = require('gulp-concat'),
 	imagemin = require('gulp-imagemin'),
 	jshint = require('gulp-jshint'),
-	merge = require('merge-stream'),
 	minifyCSS = require('gulp-minify-css'),
 	minifyHTML = require('gulp-minify-html'),
 	ngAnnotate = require('gulp-ng-annotate'),
@@ -52,22 +51,18 @@ gulp.task('htmlpage', function() {
 
 // move json data -- not working
 gulp.task('moveJSON', function(){
-	gulp.src('./src/*.json')
+	gulp.src('./src/*json')
 		.pipe(gulp.dest('./build/'));
 });
 
 // JS concat and ngAnnotate -- just for debugging
 gulp.task('scripts', function() {
-	var events = gulp.src(['.src/scripts/events.js'])
-								.pipe(gulp.dest('./build/scripts/'));
-  var libs = gulp.src(['./src/scripts/libraries/angular.min.js', './src/scripts/libraries/*.js'])
-								.pipe(gulp.dest('./build/scripts/libraries/'));
-	var ang = gulp.src(['./src/scripts/app.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', './src/scripts/directives/*.js', './src/scripts/filters/*.js'])
-								.pipe(ngAnnotate())
-								.pipe(concat('app.js'))
-								.pipe(gulp.dest('./build/scripts/'));
-
-	return merge(events, libs, ang);
+  gulp.src(['./src/scripts/libraries/angular.min.js', './src/scripts/libraries/*.js'])
+		.pipe(gulp.dest('./build/scripts/libraries/'));
+	gulp.src(['./src/scripts/app.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', './src/scripts/directives/*.js', './src/scripts/filters/*.js'])
+		.pipe(ngAnnotate())
+		.pipe(concat('app.js'))
+		.pipe(gulp.dest('./build/scripts/'));
 });
 
 // JS concat, ngAnnotate, strip debugging, and uglify -- for final build
@@ -90,7 +85,7 @@ gulp.task('styles', function() {
 		.pipe(concat('styles.css'))
 		.pipe(autoprefix('last 2 versions'))
 		.pipe(minifyCSS())
-		.pipe(gulp.dest('./build/styles/'));
+		.pipe(gulp.dest('./build/styles/'))
 });
 
 // browsersync
@@ -98,8 +93,7 @@ gulp.task('browser-sync', function(){
   browserSync.init({
   server: {
             baseDir: "./build/"
-        },
-  notify: false
+        }
   });
   gulp.watch('./src/*.json', ['moveJSON']).on('change', browserSync.reload);
   gulp.watch('./src/*.html', ['htmlpage']).on('change', browserSync.reload);
