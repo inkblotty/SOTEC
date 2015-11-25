@@ -25,11 +25,15 @@ body{
 header{
 	color: $mainWhite;
 	font-weight: 300;
-	margin: 24% auto;
+	margin: 12% auto;
 	text-align: center;
 
 	h1{
 		text-transform: uppercase;
+
+		img{
+			height: 10em;
+		}
 	}
 }
 
