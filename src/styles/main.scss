@@ -74,6 +74,11 @@ header{
 	text-align: center;
 	width: 13%;
 
+	.person-name{
+		height: 3em;
+		vertical-align: top;
+	}
+
 	img{
 		height: auto;
 		margin: 0;
@@ -99,8 +104,9 @@ header{
 			padding: 2%;
 			width: 85%;
 
-			.person-name{
+			.person-name {
 				font-size: 2em;
+				height: auto;
 			}
 
 			.job-title{
