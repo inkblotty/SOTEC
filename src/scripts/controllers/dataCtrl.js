@@ -10,12 +10,15 @@ app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 		popup['classList'].remove('hidden');
 	}
 
-	jsonData.close = function(data){
-		var person = document.getElementById(data);
-		var popup = person.getElementsByClassName('popup')[0];
+	jsonData.close = function(){
 
-		popup['classList'].add('hidden');
+		var popups = document.getElementsByClassName('popup');
+
+		for (var i=0; i<popups.length; i++){
+			popups[i].className = "popup hidden";
+		}
 	}
+
 
   dataServ.success(function(data) {
 		jsonData.data = data;

@@ -18,7 +18,8 @@ body{
 }
 
 .hidden{
-	display: none;
+	display: none !important;
+	visibility: hidden;
 }
 
 header{
@@ -93,9 +94,10 @@ header{
 			background-color: $mainWhite;
 			border-radius: 0.5em;
 			color: #000;
-			height: 96vh;
+			height: 96%;
 			margin: 2vh auto;
-			width: 80%;
+			padding: 2%;
+			width: 85%;
 
 			.person-name{
 				font-size: 2em;
@@ -107,11 +109,16 @@ header{
 			}
 
 			.close {
-				font-size: 1.5em;
-				top: 2em;
-				right: 12%;
+				font-size: 2em;
+				top: 3%;
+				right: 6%;
 				position: fixed;
 				cursor: pointer;
+				z-index: 1000;
+
+				&:hover{
+					color: $brightRed;
+				}
 			}
 
 			.col {
@@ -127,7 +134,7 @@ header{
 				color: #000;
 
 				&:hover{
-					color: $medRed;
+					color: $brightRed;
 				}
 
 				i {
