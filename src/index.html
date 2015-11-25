@@ -28,7 +28,15 @@
 		<div class="about-container container flex-col">
 			<div class="col intro">
 			  <h3 class="section-title">{{ jsonData.data.name }}</h3>
-			  <p>{{ jsonData.data.about.whyScum }}</p>
+			  <p>{{ jsonData.data.about.verse[0] }}</p>
+			  <p>{{ jsonData.data.about.verse[1] }}</p>
+			</div>
+			<div class="col updates">
+				<h4>Service Times:</h4>
+				<p>{{ jsonData.data.about.services }}</p>
+
+				<h4>Upcoming Events:</h4>
+				<p ng-repeat="event in jsonData.data.about.upcoming">{{ event }}</p>
 			</div>
 			<div class="col">
 			  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6136.537411930044!2d-105.00004073853675!3d39.73361457120702!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4bc2cf16c0b5eb0c!2sScum+of+the+Earth+Church!5e0!3m2!1sen!2sus!4v1448232187920" width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -47,10 +55,14 @@
 					
 					<div class="popup hidden">
 						<div class="pop-inside flex-col">
-							<div class="col">
+							<div class="col col-top">
 								<div class="person-name">{{ person. name }}</div>
 								<div class="job-title">{{ person.title }}</div>
-								<div class="person-caption">{{ person.description }}</div>
+								<div class="person-descr" ng-repeat="info in person.description">
+									<h4>{{ info.subtitle }}</h4>
+									<p>{{ info.answer }}</p>
+									<p><a href="{{ info.link }}">{{ info.linkText }}</a></p>
+								</div>
 							</div>
 							<div class="col">
 								<div class="close" ng-click="jsonData.close(); $event.stopPropagation();"><i class="fa fa-times"></i></div>

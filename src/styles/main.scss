@@ -53,8 +53,16 @@ header{
 .about-container{
 	flex-wrap: wrap;
 
+	h4{
+		margin: 0;
+	}
+
 	.intro{
 		margin-right: 2%;
+	}
+
+	.updates{
+		width: 60%;
 	}
 }
 
@@ -87,15 +95,16 @@ header{
 	}
 
 	.popup {
-		cursor: auto;
 		background-color: rgba(0,0,0,0.5);
+		cursor: auto;
 		height: 100vh;
+		left: 0;
 		position: fixed;
 		top: 0;
-		left: 0;
 		width: 100vw;
 
 		.pop-inside {
+			align-items: flex-start;
 			background-color: $mainWhite;
 			border-radius: 0.5em;
 			color: #000;
@@ -127,11 +136,22 @@ header{
 				}
 			}
 
+			.person-descr {
+				text-align: left;
+				h4 {
+					margin-bottom: 0.5em;
+				}
+
+				a {
+					text-decoration: none;
+				}
+			}
+
 			.col {
 				margin: 2%;
 				width: 50%;
 			}
-		
+
 			img {
 				width: 100%;
 			}
