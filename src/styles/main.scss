@@ -80,7 +80,8 @@ header{
 		width: 100%;
 	}
 
-	.popup{
+	.popup {
+		cursor: auto;
 		background-color: rgba(0,0,0,0.5);
 		height: 100vh;
 		position: fixed;
@@ -88,21 +89,47 @@ header{
 		left: 0;
 		width: 100vw;
 
-		.pop-inside{
+		.pop-inside {
 			background-color: $mainWhite;
-			border-radius: 5em;
+			border-radius: 0.5em;
 			color: #000;
 			height: 96vh;
 			margin: 2vh auto;
 			width: 80%;
 
-			.col{
+			.person-name{
+				font-size: 2em;
+			}
+
+			.job-title{
+				font-size: 1.5em;
+				margin: 1% auto;
+			}
+
+			.close {
+				cursor: pointer;
+			}
+
+			.col {
 				margin: 2%;
 				width: 50%;
 			}
 		
-			img{
+			img {
 				width: 100%;
+			}
+
+			a {
+				color: #000;
+
+				&:hover{
+					color: $medRed;
+				}
+
+				i {
+					font-size: 1.5em;
+					margin: 0 2%;
+				}
 			}
 		}
 	}

@@ -53,6 +53,7 @@
 								<div class="person-caption">{{ person.description }}</div>
 							</div>
 							<div class="col">
+								<div class="close" ng-click="jsonData.close(person.id)">x</div>
 								<img src="{{ person.pic }}">
 								<div class="contact-container">
 						  		<a href="{{ person.contact.email }}"><i class="fa fa-envelope-o"></i></a>
