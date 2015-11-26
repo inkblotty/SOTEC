@@ -23,9 +23,10 @@ body{
 }
 
 .line{
-	color: $medRed;
+	background-color: $brightRed;
 	height: 2px;
-	width: 30em;
+	margin: 0 auto 2% 0;
+	width: 100%;
 }
 
 header{
@@ -52,7 +53,8 @@ header{
 	padding: 2% 4%;
 
 	.section-title{
-		text-transform: uppercase;
+		margin: 0;
+		text-transform: lowercase;
 	}
 
 	p{

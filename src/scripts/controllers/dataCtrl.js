@@ -19,7 +19,6 @@ app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 		}
 	}
 
-
   dataServ.success(function(data) {
 		jsonData.data = data;
 	});
