@@ -8,10 +8,15 @@ SOTEC website redesign
   ** easier to edit information -- create json file with data?
 
 - About Section
-  * carousel linked to instagram account
+  * carousel linked to dropbox
   * description with contact info
+  * map coloration changed to grayscale
+
+- Theology Section
+  * expandable info with cross-arrows
 
 - Staff Section
+  * expandable info with cross-arrows
   * redesign to be grid of profile pictures with names
      - details expand into popOver on click
   * new captions needed for staff, list of who to include and what titles
