@@ -8,7 +8,7 @@ SOTEC website redesign
   ** easier to edit information -- create json file with data?
 
 - About Section
-  * carousel linked to dropbox
+  * image carousel linked to dropbox
   * description with contact info
   * map coloration changed to grayscale
 

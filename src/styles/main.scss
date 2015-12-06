@@ -17,6 +17,43 @@ body{
 	width: 99%;
 }
 
+.sermons a{
+	border: 2px solid $brightRed;
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 0.25em;
+	color: $brightRed;
+	cursor: pointer;
+	font-size: 1.1em;
+	letter-spacing: 0.1em;
+	margin: 2% 0;
+	max-width: 18em;
+	vertical-align: center;
+	transition: all 0.5s ease;
+
+	text-decoration: none;
+	color: $brightRed;
+	max-width: 18em;
+	padding: 2%;
+
+	&:hover{
+		background-color: $medRed;
+		border: 2px solid $medRed;
+		color: $mainWhite;
+	}
+
+	span{
+		color: $mainWhite;
+		margin: 0;
+		vertical-align: top;
+	}
+
+	i{
+		font-size: 2em;
+		margin-right: 2%;
+		vertical-align: top;
+	}
+}
+
 .hidden{
 	display: none !important;
 	visibility: hidden;
@@ -27,6 +64,12 @@ body{
 	height: 2px;
 	margin: 0 auto 2% 0;
 	width: 100%;
+
+	&.thin{
+		height: 1px;
+		margin: 0 auto 0 0;
+		width: 90%;
+	}
 }
 
 header{
@@ -45,7 +88,7 @@ header{
 }
 
 .container{
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.7);
 	border: 1px solid rgba(0,0,0,0);
 	color: $mainWhite;
 	margin: 0;
@@ -70,12 +113,30 @@ header{
 		margin: 0;
 	}
 
+	.subsection{
+		margin-bottom: 2%;
+	}
+
 	.intro{
 		margin-right: 2%;
 	}
 
 	.updates{
 		width: 60%;
+
+		.events{
+			div{ 
+				vertical-align: center;
+			}
+
+			i{ 
+				color: $brightRed;
+				font-size: 0.5em;
+				line-height: 2.5em;
+				margin: 0 1%;
+				vertical-align: top;
+			}
+		}
 	}
 }
 

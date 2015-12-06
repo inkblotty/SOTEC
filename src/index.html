@@ -32,11 +32,28 @@
 			  <p>{{ jsonData.data.about.verse[1] }}</p>
 			</div>
 			<div class="col updates">
-				<h4>Service Times:</h4>
-				<p>{{ jsonData.data.about.services }}</p>
+				<div class="services subsection">
+					<h4>service times</h4>
+					<div class="line thin"></div>
+					<p>{{ jsonData.data.about.services }}</p>
+				</div>
 
-				<h4>Upcoming Events:</h4>
-				<p ng-repeat="event in jsonData.data.about.upcoming">{{ event }}</p>
+				<div class="events subsection">
+					<h4>upcoming events</h4>
+					<div class="line thin"></div>
+					<div ng-repeat="event in jsonData.data.about.upcoming">
+						<span>{{ event.date }}</span>
+						<i class="fa fa-circle"></i>
+						<span>{{ event.event }}</span>
+					</div>
+				</div>
+
+				<div class="sermons">
+					<a ng-href="{{ jsonData.data.about.sermons }}">
+						<i class="fa fa-soundcloud"></i>
+						<span>Sermons on Soundcloud</span>
+					</a>
+				</div>
 			</div>
 			<div class="col">
 			  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6136.537411930044!2d-105.00004073853675!3d39.73361457120702!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4bc2cf16c0b5eb0c!2sScum+of+the+Earth+Church!5e0!3m2!1sen!2sus!4v1448232187920" width="300" height="225" frameborder="0" style="border:0" allowfullscreen></iframe>
