@@ -11,6 +11,6 @@ app.filter('phoneFilter', function(){
 			return isNum(char);
 		}).join('');
 
-		return "(" + output.slice(0,3) + ")" + output.slice(3,6) + "-" + output.slice(6);
+		return "(" + output.slice(0,3) + ") " + output.slice(3,6) + "-" + output.slice(6);
 	}
 });
