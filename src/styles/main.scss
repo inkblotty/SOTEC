@@ -17,40 +17,39 @@ body{
 	width: 99%;
 }
 
-.sermons a{
-	border: 2px solid $brightRed;
-	background-color: rgba(0,0,0,0.6);
-	border-radius: 0.25em;
-	color: $brightRed;
-	cursor: pointer;
-	font-size: 1.1em;
-	letter-spacing: 0.1em;
-	margin: 2% 0;
-	max-width: 18em;
-	vertical-align: center;
-	transition: all 0.5s ease;
+.sermons {
+	margin: 3% 0;
 
-	text-decoration: none;
-	color: $brightRed;
-	max-width: 18em;
-	padding: 2%;
+	a{
+		border: 2px solid $brightRed;
+		background-color: rgba(0,0,0,0.6);
+		border-radius: 0.25em;
+		color: $brightRed;
+		cursor: pointer;
+		font-size: 1.1em;
+		letter-spacing: 0.1em;
+		max-width: 18em;
+		padding: 2%;
+		text-decoration: none;
+		transition: all 0.5s ease;
 
-	&:hover{
-		background-color: $medRed;
-		border: 2px solid $medRed;
-		color: $mainWhite;
-	}
+		&:hover{
+			background-color: $medRed;
+			border: 2px solid $medRed;
+			color: $mainWhite;
+		}
 
-	span{
-		color: $mainWhite;
-		margin: 0;
-		vertical-align: top;
-	}
+		span{
+			color: $mainWhite;
+			margin: 0;
+		}
 
-	i{
-		font-size: 2em;
-		margin-right: 2%;
-		vertical-align: top;
+		i{ 
+			font-size: 2em;
+			line-height: 1.4em;
+			margin-right: 2%;
+			vertical-align: middle;
+		}
 	}
 }
 
@@ -96,6 +95,7 @@ header{
 	padding: 2% 4%;
 
 	.section-title{
+		letter-spacing: 0.08em;
 		margin: 0;
 		text-transform: lowercase;
 	}
@@ -110,6 +110,7 @@ header{
 	flex-wrap: wrap;
 
 	h4{
+		letter-spacing: 0.08em;
 		margin: 0;
 	}
 
