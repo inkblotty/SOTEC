@@ -143,13 +143,27 @@ header{
 }
 
 .theology{
+	h4{
+		margin: 0;
+		text-transform: lowercase;
+	}
+
 	.thin{
 		width: 100%;
 	}
 
 	.row{
-		margin: 0 auto;
+		margin: 0 auto 2% auto;
 		width: 90%;
+
+		li{ 
+			color: $brightRed;
+			margin-bottom: 2.5%;
+
+			span{
+				color: $mainWhite;
+			}
+		}
 	}
 }
 

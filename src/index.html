@@ -77,16 +77,16 @@
 				<div class="row">
 					<h4>{{ jsonData.data.theology.mission.heading }}</h4>
 					<div class="line thin"></div>
-					<ul class="list-container" ng-repeat="item in jsonData.data.theology.mission.list">
-						<li>{{ item }}</li>
+					<ul class="list-container flex" ng-repeat="item in jsonData.data.theology.mission.list">
+						<li><span>{{ item }}</span></li>
 					</ul>
 				</div>
-				
+
 				<div class="row">
 					<h4>Faith</h4>
 					<div class="line thin"></div>
-					<ul class="list-container" ng-repeat="item in jsonData.data.theology.faith">
-						<li>{{ item }}</li>
+					<ul class="list-container flex" ng-repeat="item in jsonData.data.theology.faith">
+						<li><span>{{ item }}</span></li>
 					</ul>
 				</div>
 			</div>
