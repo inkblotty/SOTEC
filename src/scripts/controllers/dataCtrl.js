@@ -1,5 +1,5 @@
 // reads and controlls the json file, info.json
-app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
+app.controller('dataCtrl', ['$scope', 'dataServ', 'phoneFilter', function($scope, dataServ, phoneFilter){
 	var jsonData = this;
 
 

@@ -59,7 +59,7 @@ gulp.task('moveJSON', function(){
 gulp.task('scripts', function() {
   gulp.src(['./src/scripts/libraries/angular.min.js', './src/scripts/libraries/*.js'])
 		.pipe(gulp.dest('./build/scripts/libraries/'));
-	gulp.src(['./src/scripts/app.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', './src/scripts/directives/*.js', './src/scripts/filters/*.js'])
+	gulp.src(['./src/scripts/app.js', './src/scripts/filters/*.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', './src/scripts/directives/*.js', './src/scripts/*.js'])
 		.pipe(ngAnnotate())
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest('./build/scripts/'));
@@ -69,7 +69,7 @@ gulp.task('scripts', function() {
 gulp.task('finalScripts', function(){
   gulp.src(['./src/scripts/libraries/angular.min.js', './src/scripts/libraries/*.js'])
 		.pipe(gulp.dest('./build/scripts/libraries/'));
-	gulp.src(['./src/scripts/app.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', './src/scripts/directives/*.js', './src/scripts/filters/*.js', '.src/scripts/*.js'])
+	gulp.src(['./src/scripts/app.js', './src/scripts/filters/*.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', '.src/scripts/*.js'])
 	  .pipe(ngAnnotate())
 	  .pipe(strigDebug())
 	  .pipe(uglify())

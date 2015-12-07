@@ -20,7 +20,7 @@
 	<div ng-controller="dataCtrl as jsonData">
 
 		<header>
-			<h1><img src="{{ jsonData.data.logo }}" alt="Scum of the Earth Church logo"></h1>
+			<h1><img ng-src="{{ jsonData.data.logo }}" alt="Scum of the Earth Church logo"></h1>
 			<h3>Denver, CO</h3>
 		</header>
 
@@ -68,7 +68,7 @@
 			<div class="line"></div>
 			<div class="flex">
 				<div class="person-container col" ng-repeat="person in jsonData.data.staff" id="{{ person.id }}" data="{{ person.id }}" ng-click="jsonData.popOver(person.id)">
-					<img src="{{ person.pic }}">
+					<img ng-src="{{ person.pic }}">
 					<div class="person-name">{{ person.name }}</div>
 					
 					<div class="popup hidden">
@@ -79,17 +79,17 @@
 								<div class="person-descr" ng-repeat="info in person.description">
 									<h4>{{ info.subtitle }}</h4>
 									<p>{{ info.answer }}</p>
-									<p><a href="{{ info.link }}">{{ info.linkText }}</a></p>
+									<p><a ng-href="{{ info.link }}">{{ info.linkText }}</a></p>
 								</div>
 							</div>
 							<div class="col">
 								<div class="close" ng-click="jsonData.close(); $event.stopPropagation();"><i class="fa fa-times"></i></div>
-								<img src="{{ person.pic }}">
+								<img ng-src="{{ person.pic }}">
 								<div class="contact-container">
-						  		<a href="{{ person.contact.email }}"><i class="fa fa-envelope-o"></i></a>
-									<a href="{{ person.contact.twitter }}"><i class="fa fa-twitter"></i></a>
-									<a href="{{ person.contact.facebook }}"><i class="fa fa-facebook"></i></a>
-									<a href="{{ person.donateLink }}"><i class="fa fa-paypal"></i></a>
+						  		<a ng-href="{{ person.contact.email }}"><i class="fa fa-envelope-o"></i></a>
+									<a ng-href="{{ person.contact.twitter }}"><i class="fa fa-twitter"></i></a>
+									<a ng-href="{{ person.contact.facebook }}"><i class="fa fa-facebook"></i></a>
+									<a ng-href="{{ person.donateLink }}"><i class="fa fa-paypal"></i></a>
 								</div>
 							</div>
 						</div>
