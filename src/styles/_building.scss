@@ -1,0 +1,53 @@
+// build_form css
+
+.container.form-container{
+	background-color: transparent;
+	flex-wrap: wrap;
+	font-size: 1.1em;
+	margin: 5% auto;
+	max-width: 70%;
+
+	form{
+		background-color: rgba(0,0,0,0.95);
+		box-shadow: 2px 1px 3px black;
+		max-width: 100%;
+		padding: 3em;
+
+		h2{
+			font-weight: 300;
+			margin: 0;
+		}
+
+		div{
+			margin-bottom: 1.6em;
+		}
+
+		input{
+			background-color: rgba(255,255,255,0.1);
+			border: none;
+			box-shadow: inset 2px 1px rgba(0,0,0,0.5);
+			font-size: 1em;
+			margin-left: 0.5em;
+			padding: 0.25em 0.5em;
+		}
+
+		select{
+			background-color: rgba(255,255,255,0.1);
+			border: none;
+			color: rgb(223,209,207);
+			font-size: 1em;
+			margin-left: 0.5em;
+			padding: 0.25em 0.5em;
+
+			option{
+				background-color: #1e1e1e;
+				padding: 0.25em 0.5em;
+			}
+		}
+
+		.submit-button{
+			background-color: rgb(166,27,10);
+			padding: 0.5em 1em;
+		}
+	}
+}

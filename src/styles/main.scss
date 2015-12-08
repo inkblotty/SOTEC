@@ -1,11 +1,12 @@
 // main styles
 @import '_extensions';
+@import '_building';
 
 $mainWhite:rgb(223,209,207);
 $brightRed:rgb(217,35,13);
 $medRed:rgba(127,20,8,0.7);
 $marroon:rgb(89,35,29);
-$accentRed:166,27,10;
+$accentRed:rgb(166,27,10);
 
 body{
 	background-image: url("../images/bwBackground.png");
@@ -15,6 +16,10 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	margin: 0;
 	width: 99%;
+}
+
+input{
+	color: $mainWhite;
 }
 
 .sermons {

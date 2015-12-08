@@ -4,28 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Scum Building Request Form</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="styles/styles.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-	<div class="flex container">
+	<div class="flex container form-container">
 		<form action="http://submit.jotform.us/submit/33376290694160" method="post" name="form_33376290694160" id="33376290694160" accept-charset="utf-8" novalidate="true" target="_top">
-			
+			<h2>Scum Building Use Form</h2>
+			<div class="line"></div>
+
 			<div class="name-sect">
 				<label id="name-label" for="">Name*
-					<input type="text" name="first-name-input" placeholder="first name">
-					<input type="text" name="last-name-input" placeholder="last name">
+					<input type="text" name="first-name-input" placeholder="first name" required>
+					<input type="text" name="last-name-input" placeholder="last name" required>
 				</label>
 			</div>
 
 			<div class="phone-sect">
 				<label id="phone-label" for="">Phone Number*
-					<input type="number" name="phone-input" placeholder="phone #">
+					<input type="tell" name="phone-input" placeholder="phone #" required>
 				</label>
 			</div>
 
 			<div class="email-sect">
 				<label id="email-label" for="">Email*
-					<input type="text" name="email-input" placeholder="email">
+					<input type="email" name="email-input" placeholder="email">
 				</label>
 			</div>
 
@@ -68,7 +74,8 @@
 					<input type="text">
 				</label>
 			</div>
-
+			
+			<input type="submit" class="submit-button">
 		</form>
 	</div>
 	
