@@ -129,6 +129,7 @@ header{
 	}
 
 	.updates{
+		margin-top: 2%;
 		width: 60%;
 
 		.events{
@@ -274,6 +275,14 @@ header{
 				}
 			}
 		}
+	}
+}
+
+.map-container{
+	margin-bottom: 2%;
+
+	.google-map{
+		height: 200px;
 	}
 }
 

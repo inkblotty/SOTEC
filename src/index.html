@@ -12,9 +12,12 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="styles/styles.css">
 
+	<!-- Google Maps API -->
+	<script src="//maps.googleapis.com/maps/api/js"></script>
+
 	<!-- External Libraries -->
 	<script src="./scripts/libraries/angular.js"></script>
-	
+	<script src="./scripts/libraries/ng-maps.min.js"></script>	
 </head>
 <body ng-app="scummyApp">
 	<div ng-controller="dataCtrl as jsonData">
@@ -57,16 +60,11 @@
 			</div>
 			<div class="col">
 			  
-			  <!-- need to get api keys and configure
-			  <div ng-controller="mapCtrl as mapper" id="map_canvas">
-    			<ui-gmap-google-map id='customMap' center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
-        		<ui-gmap-markers models="eventMarkers" coords="'self'" idKey="'id'" icon="'icon'" click="'onClick'">
-            	<ui-gmap-windows show="show">
-                <div ng-non-bindable>{{content}}</div>
-           		</ui-gmap-windows>
-        		</ui-gmap-markers>
-    			</ui-gmap-google-map>
-				</div>-->
+			  	<div ng-controller="mapCtrl as mapper" class="map-container">
+			  		<map ng-transclude class="google-map" center="map.center" options="map.options">
+							<marker position="marker.position" decimals="marker.decimals" options="marker.options"></marker>
+			  		</map>
+			  	</div>
 
 			  <p>{{ jsonData.data.about.contact.address }}</p>
 				<p>{{ jsonData.data.about.contact.email }}</p>

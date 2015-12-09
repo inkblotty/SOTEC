@@ -7,10 +7,12 @@ app.filter('phoneFilter', function(){
 	}
 
 	return function(input){
-		var output = input.toString().split('').filter(function(char){
-			return isNum(char);
-		}).join('');
+		if (input !== undefined) {
+			var output = input.toString().split('').filter(function(char){
+				return isNum(char);
+			}).join('');
 
-		return "(" + output.slice(0,3) + ") " + output.slice(3,6) + "-" + output.slice(6);
+			return "(" + output.slice(0,3) + ") " + output.slice(3,6) + "-" + output.slice(6);
+		}
 	}
 });
