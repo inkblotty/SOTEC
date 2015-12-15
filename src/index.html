@@ -104,8 +104,11 @@
 	  <div class="container" id="staff-container">
 			<h3 class="section-title">Staff</h3>
 			<div class="line"></div>
+
+			<button ng-click="jsonData.toggleVis('staff')">show hide</button>
+
 			<div class="flex">
-				<div class="person-container col" ng-repeat="person in jsonData.data.staff" id="{{ person.id }}" data="{{ person.id }}" ng-click="jsonData.popOver(person.id)">
+				<div ng-show="jsonData.visible.staff" class="person-container col" ng-repeat="person in jsonData.data.staff" id="{{ person.id }}" data="{{ person.id }}" ng-click="jsonData.popOver(person.id)">
 					<img ng-src="{{ person.pic }}">
 					<div class="person-name">{{ person.name }}</div>
 					

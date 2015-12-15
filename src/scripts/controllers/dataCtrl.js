@@ -2,6 +2,15 @@
 app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 	var jsonData = this;
 
+	jsonData.visible = {
+		staff: false,
+		theology: false
+	}
+
+	jsonData.toggleVis = function(sectionName){
+		console.log(jsonData.visible[sectionName]);
+		jsonData.visible[sectionName] === true ? jsonData.visible[sectionName] = false : jsonData.visible[sectionName] = true;
+	}
 
 	jsonData.popOver = function(data){
 		var person = document.getElementById(data);
@@ -11,7 +20,6 @@ app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 	}
 
 	jsonData.close = function(){
-
 		var popups = document.getElementsByClassName('popup');
 
 		for (var i=0; i<popups.length; i++){
