@@ -4,7 +4,9 @@ app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 
 	jsonData.visible = {
 		staff: false,
-		theology: false
+		whyScum: false,
+		weStrive: false,
+		faith: false
 	}
 
 	jsonData.toggleVis = function(sectionName){
