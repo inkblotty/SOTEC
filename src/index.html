@@ -80,12 +80,18 @@
 				<div class="row">
 					<h4>Why Scum?</h4>
 					<div class="line thin"></div>
+
+					<img class="expand-arrow" src="images/arrowCross3.png" ng-click="jsonData.toggleVis('whyScum')">
+
 					<p ng-show="jsonData.visible.whyScum">{{ jsonData.data.theology.whyScum }}</p>
 				</div>
 
 				<div class="row">
 					<h4>{{ jsonData.data.theology.mission.heading }}</h4>
 					<div class="line thin"></div>
+
+					<img class="expand-arrow" src="images/arrowCross3.png"  ng-click="jsonData.toggleVis('weStrive')">
+
 					<ul class="list-container flex" ng-repeat="item in jsonData.data.theology.mission.list" ng-show="jsonData.visible.weStrive">
 						<li><span>{{ item }}</span></li>
 					</ul>
@@ -94,6 +100,9 @@
 				<div class="row">
 					<h4>Faith</h4>
 					<div class="line thin"></div>
+
+					<img class="expand-arrow" src="images/arrowCross3.png" ng-click="jsonData.toggleVis('faith')">
+
 					<ul class="list-container flex" ng-repeat="item in jsonData.data.theology.faith" ng-show="jsonData.visible.faith">
 						<li><span>{{ item }}</span></li>
 					</ul>
