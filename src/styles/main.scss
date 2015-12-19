@@ -14,6 +14,7 @@ body{
 	background-repeat: no-repeat;
 	background-size: 100vw auto;
 	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 0.07em;
 	margin: 0;
 	width: 99%;
 }
@@ -22,9 +23,12 @@ input{
 	color: $mainWhite;
 }
 
-.sermons {
-	margin: 3% 0;
+.hidden{
+	display: none !important;
+	visibility: hidden;
+}
 
+.ext-link-button{
 	a{
 		border: 2px solid $brightRed;
 		background-color: rgba(0,0,0,0.6);
@@ -56,11 +60,6 @@ input{
 			vertical-align: middle;
 		}
 	}
-}
-
-.hidden{
-	display: none !important;
-	visibility: hidden;
 }
 
 .line{
@@ -145,7 +144,18 @@ header{
 				vertical-align: top;
 			}
 		}
+
+		.building-link{
+			@extend .ext-link-button;
+		}
 	}
+
+	.sermons {
+	margin: 3% 0;
+
+	@extend .ext-link-button;
+}
+
 }
 
 .theology{

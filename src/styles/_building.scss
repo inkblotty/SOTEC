@@ -1,15 +1,55 @@
 // build_form css
 
+.return-home{
+	margin: 2% 0 0 2%;
+	text-align: center;
+	width: 6em;
+
+	a{
+		color: white;
+		font-size: 0.8em;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	img{
+		margin-top: 0.5em;
+		width: 100%;
+	}
+}
+
 .container.form-container{
 	background-color: transparent;
 	flex-wrap: wrap;
 	font-size: 1.1em;
-	margin: 5% auto;
+	margin: -5% auto 2% auto;
 	max-width: 70%;
 
+	::-webkit-input-placeholder{
+		color: rgba(255,255,255,0.6);
+		font-weight: 300;
+		text-shadow: 1px 2px 3px black;
+	}
+	::-moz-placeholder{
+		color: rgba(255,255,255,0.6);
+		font-weight: 300;
+		text-shadow: 1px 2px 3px black;
+	}
+	:-moz-placeholder{
+		color: rgba(255,255,255,0.6);
+		font-weight: 300;
+		text-shadow: 1px 2px 3px black;
+	}
+	:-ms-input-placeholder{
+		color: rgba(255,255,255,0.6);
+		font-weight: 300;
+		text-shadow: 1px 2px 3px black;
+	}
+
 	form{
-		background-color: rgba(0,0,0,0.95);
+		background-color: rgba(0,0,0,0.85);
 		box-shadow: 2px 1px 3px black;
+		letter-spacing: 0.1em;
 		max-width: 100%;
 		padding: 3em;
 
@@ -23,12 +63,26 @@
 		}
 
 		input{
-			background-color: rgba(255,255,255,0.1);
+			background-color: rgba(255,255,255,0.05);
 			border: none;
 			box-shadow: inset 2px 1px rgba(0,0,0,0.5);
 			font-size: 1em;
 			margin-left: 0.5em;
 			padding: 0.25em 0.5em;
+		}
+
+		textarea{
+			@extend input;
+			font-family: Open Sans, sans-serif;
+			font-size: 0.9em;
+			text-align: left;
+
+			&.large-input{
+				height: 6em;
+				margin-top: 0.5em;
+				text-wrap: wrap;
+				width: 95%;
+			}
 		}
 
 		select{
@@ -44,8 +98,15 @@
 			}
 		}
 
+		#start{
+			margin-right: 1em;
+		}
+
 		.submit-button{
 			background-color: rgb(166,27,10);
+			border:none;
+			border-radius: 0.2em;
+			box-shadow: 2px 1px rgba(0,0,0,0.9);
 			padding: 0.5em 1em;
 		}
 	}

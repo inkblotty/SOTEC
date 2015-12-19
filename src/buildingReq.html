@@ -8,50 +8,61 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="styles/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
+	<div class="return-home">
+		<a href="./index.html">
+			Go back to
+			<img src="images/logo1.png" alt="Scum of the Earth Church Logo; back to home">
+		</a>
+	</div>
 
 	<div class="flex container form-container">
-		<form action="http://submit.jotform.us/submit/33376290694160" method="post" name="form_33376290694160" id="33376290694160" accept-charset="utf-8" novalidate="true" target="_top">
+		<form action="http://formspree.io/fosterkatiea@gmail.com" method="POST" accept-charset="utf-8">
+			<input type="hidden" name="_subject" value="Building Request">
+			<input type="text" name="_gotcha" style="display:none"> <!-- for fooling scrapers -->
 			<h2>Scum Building Use Form</h2>
 			<div class="line"></div>
 
 			<div class="name-sect">
-				<label id="name-label" for="">Name*
-					<input type="text" name="first-name-input" placeholder="first name" required>
-					<input type="text" name="last-name-input" placeholder="last name" required>
-				</label>
+				<label id="name-label" for="name-input">Name *</label>
+					<input type="text" name="name-input" placeholder="name" required>
 			</div>
 
 			<div class="phone-sect">
-				<label id="phone-label" for="">Phone Number*
-					<input type="tell" name="phone-input" placeholder="phone #" required>
-				</label>
+				<label id="phone-label" for="phone-input">Phone Number *</label>
+					<input type="tel" name="phone-input" placeholder="phone #" required>
 			</div>
 
 			<div class="email-sect">
-				<label id="email-label" for="">Email*
+				<label id="email-label" name="_replyto" for="email-input">Email *</label>
 					<input type="email" name="email-input" placeholder="email">
-				</label>
 			</div>
 
 			<div class="description-sect">
-				<label id="descr-label" for="">Event Description*
+				<label id="descr-label" for="descr-input">Event Description *</label>
 					<input type="text" name="descr-input" placeholder="">
-				</label>
 			</div>
 
-			<div class="start-sect">
-				<!-- formatted for time? -->
+			<div class="date-sect">
+				<label for="date">Date *</label>
+					<input type="date" name="date">	
 			</div>
 
-			<div class="end-sect">
-				<!-- formatted for time? -->
+			<div class="time-sect">
+				<label for="start-time">Start Time *</label>
+					<input id="start" type="time" name="start-time">
+				
+				<label for="end-time">End Time *</label>
+					<input type="time" name="end-time">
+				
+				<!-- compared to google calendar? -->
 			</div>
 
 			<div class="room-sect">
-				<label for="">Room to be used*</label>
-				<select name="" id="">
+				<label for="room">Room to be used *</label>
+				<select name="room">
 					<option value="sanctuary">Sanctuary</option>
 					<option value="purple">Purple Room</option>
 					<option value="kitchen">Kitchen</option>
@@ -64,18 +75,26 @@
 			</div>
 
 			<div class="attendees-sect">
-				<label for="">Expected number of people at event*
-					<input type="number">
-				</label>
+				<label for="attendees">Expected number of people at event *</label>
+					<input type="number" name="attendees">
 			</div>
 
 			<div class="open-sect">
-				<label for="">Who will open and close the building?*
-					<input type="text">
-				</label>
+				<label for="person-in-charge">Who will open and close the building? *</label>
+					<input type="text" name="person-in-charge">
+			</div>
+
+			<div class="cleanup-sect">
+				<label for="clean-up">What's your plan for clean-up? *</label>
+					<textarea class="large-input" type="text" name="clean-up"></textarea>
+			</div>
+
+			<div class="details">
+				<label for="additional-details">Any other details we need to know?</label>
+					<textarea class="large-input" type="text" name="additional-details"></textarea>
 			</div>
 			
-			<input type="submit" class="submit-button">
+			<input type="submit" class="submit-button" value="Send">
 		</form>
 	</div>
 	
