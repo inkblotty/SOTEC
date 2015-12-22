@@ -130,13 +130,13 @@
 
 			<div class="flex">
 				<div ng-show="jsonData.visible.staff" class="person-container col" ng-repeat="person in jsonData.data.staff" id="{{ person.id }}" data="{{ person.id }}" ng-click="jsonData.popOver(person.id)">
-					<img ng-src="{{ person.pic }}">
+					<img class="person-thumb" ng-src="{{ person.pic }}">
 					<div class="person-name">{{ person.name }}</div>
 					
 					<div class="popup hidden">
 						<div class="pop-inside flex-col">
 							<div class="col col-top">
-								<div class="person-name">{{ person. name }}</div>
+								<div class="person-name">{{ person.name }}</div>
 								<div class="job-title">{{ person.title }}</div>
 								<div class="person-descr" ng-repeat="info in person.description">
 									<h4>{{ info.subtitle }}</h4>
@@ -146,7 +146,7 @@
 							</div>
 							<div class="col">
 								<div class="close" ng-click="jsonData.close(); $event.stopPropagation();"><i class="fa fa-times"></i></div>
-								<img ng-src="{{ person.pic }}">
+								<img ng-src="{{ person.picColor }}">
 								<div class="contact-container">
 						  		<a ng-href="{{ person.contact.email }}"><i class="fa fa-envelope-o"></i></a>
 									<a ng-href="{{ person.contact.twitter }}"><i class="fa fa-twitter"></i></a>

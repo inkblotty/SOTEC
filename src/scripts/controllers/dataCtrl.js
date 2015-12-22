@@ -29,6 +29,10 @@ app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 		}
 	}
 
+	jsonData.changeImg = function(element, newUrl){
+		element.setAttribute('src', newUrl);
+	}
+
   dataServ.success(function(data) {
 		jsonData.data = data;
 	});
