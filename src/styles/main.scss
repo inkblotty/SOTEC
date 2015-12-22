@@ -164,6 +164,13 @@ header{
 		text-transform: lowercase;
 	}
 
+	.slideshow{ border: 1px solid $marroon;
+		height: 20em;
+		margin: 0 auto;
+		text-align: center;
+		width: 80%;
+	}
+
 	.expand-arrow{
 		cursor: pointer;
 		height: 1.5em;
@@ -185,6 +192,16 @@ header{
 
 			span{
 				color: $mainWhite;
+			}
+		}
+
+		.list-container.flex{
+			align-content: flex-start;
+			flex-wrap: wrap;
+			width: 100%;
+
+			.list-item{
+				width: 100%;
 			}
 		}
 	}
