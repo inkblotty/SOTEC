@@ -130,7 +130,11 @@
 
 			<div class="flex">
 				<div ng-show="jsonData.visible.staff" class="person-container col" ng-repeat="person in jsonData.data.staff" id="{{ person.id }}" data="{{ person.id }}" ng-click="jsonData.popOver(person.id)">
-					<img class="person-thumb" ng-src="{{ person.pic }}">
+					
+					<div ng-init="itemsrc=person.pic" ng-mouseover="itemsrc=person.picColor" ng-mouseout="itemsrc=person.pic">
+						<img class="person-thumb" ng-src="{{itemsrc}}">
+					</div>
+
 					<div class="person-name">{{ person.name }}</div>
 					
 					<div class="popup hidden">
