@@ -4,7 +4,7 @@
 }
 
 #menu {
-	background-color: #fff;
+	background-color: rgba(0,0,0,0.6);
 	height: 100%;
 	left: -300px;
 	padding: 50px 30px;
@@ -22,12 +22,125 @@
           transition: all .3s ease-in;
 
   text-align: center;
+
+  .brand {
+		color: #ddd;
+		font-size: 70px;
+		font-weight: 900;
+		height: 2em;
+		line-height: .6;
+
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	ul {
+		margin-top: 30px;
+		padding: 0;
+
+		li {
+			list-style-type: none;
+
+			a {
+				border-top: 1px solid #eee;
+				color: #eee;
+				display: block;
+				font-weight: 900;
+				line-height: 50px;
+
+				-webkit-transition: all .3s ease;
+       		 -moz-transition: all .3s ease;
+         		 -o-transition: all .3s ease;
+            		transition: all .3s ease;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+        	letter-spacing: 1px;
+        }
+			}
+
+			&:last-child a {
+				border-bottom: 1px solid #eee;
+			}
+		}
+	}
 }
 
-#menu .brand {
-	color: #ddd;
-	font-size: 70px;
-	font-weight: 900;
+#menu-switch:checked ~ #menu {
+	left: 0;
+}
+
+/* MAIN PAGE */
+// ensure the main content moves over with menu slide
+
+.page-wrap {
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+    -webkit-transition: all .3s ease-in;
+       -moz-transition: all .3s ease-in;
+         -o-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+}
+
+#menu-switch:checked ~ .page-wrap {
+	margin-left: 300px
+}
+
+/* MENU TOGGLE ICON */
+#menu-toggle:focus {
+	outline: none;
+}
+
+#menu-toggle {
+	background-color: #fff;
+	border: none;
+	cursor: pointer;
+	display: inline-block;
 	height: 51px;
-	line-height: .6;
+	left: 3%;
+	padding: 0.5em;
+	position: fixed;
+	top: 5%;
+	width: 51px;
+
+	-webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+          border-radius: 50px;
+
+  -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+       -o-transition: all .5s ease;
+          transition: all .5s ease;
+/*
+  &:before, &:after {
+  	background-color: #232629;
+  	content: "";
+  	position: absolute;
+  }
+
+  &:before {
+  	height: 27px;
+  	left: 25px;
+  	top: 12px;
+  	width: 1px;
+  }
+
+  &:after {
+  	height: 1px;
+  	left: 12px;
+  	top: 25px;
+  	width: 27px;
+  }*/
+}
+
+#menu-switch:checked ~ .page-wrap #menu-toggle {
+	-webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
