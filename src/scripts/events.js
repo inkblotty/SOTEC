@@ -15,8 +15,8 @@ function scrollTo(doc, to, duration) {
 	setTimeout(function() {
 		doc.scrollTop = doc.scrollTop + perTick;
 		if (doc.scrollTop === to) {return;}
-		scrollTo(doc, to, duration - 10);
-	}, 10);
+		scrollTo(doc, to, duration - 5);
+	}, 5);
 }
 
 scumNav.onclick = function() {
