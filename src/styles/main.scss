@@ -30,6 +30,7 @@ input{
 }
 
 .ext-link-button{
+
 	a{
 		border: 2px solid $brightRed;
 		background-color: rgba(0,0,0,0.6);
@@ -61,6 +62,13 @@ input{
 			vertical-align: middle;
 		}
 	}
+}
+
+.expand-arrow{
+	cursor: pointer;
+	height: 1.5em;
+	margin: 0 auto;
+	width: auto;
 }
 
 .line{
@@ -152,10 +160,10 @@ header{
 	}
 
 	.sermons {
-	margin: 3% 0;
+		margin: 3% 0;
 
-	@extend .ext-link-button;
-}
+		@extend .ext-link-button;
+	}
 
 }
 
@@ -170,13 +178,6 @@ header{
 		margin: 0 auto;
 		text-align: center;
 		width: 80%;
-	}
-
-	.expand-arrow{
-		cursor: pointer;
-		height: 1.5em;
-		margin: 0 auto;
-		width: auto;
 	}
 
 	.thin{
@@ -208,8 +209,16 @@ header{
 	}
 }
 
-#staff-container{
+#staff{
 	max-width: 100%;
+
+	.expand-arrow {
+		img {
+			height: 1.6em;
+			vertical-align: top;
+			width: auto;
+		}
+	}
 }
 
 

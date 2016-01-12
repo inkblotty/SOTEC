@@ -104,19 +104,21 @@
 				</div>
 
 				<div class="row">
-					<h4>Why Scum?</h4>
+					<h4>
+						Why Scum?
+						<img class="expand-arrow" src="images/arrowCross1.png" ng-click="jsonData.toggleVis('whyScum')">
+					</h4>
 					<div class="line thin"></div>
-
-					<img class="expand-arrow" src="images/arrowCross3.png" ng-click="jsonData.toggleVis('whyScum')">
 
 					<p ng-show="jsonData.visible.whyScum">{{ jsonData.data.theology.whyScum }}</p>
 				</div>
 
 				<div class="row">
-					<h4>We strive to be a church who...</h4>
+					<h4>
+						We strive to be a church who...
+						<img class="expand-arrow" src="images/arrowCross1.png"  ng-click="jsonData.toggleVis('weStrive')">
+					</h4>
 					<div class="line thin"></div>
-
-					<img class="expand-arrow" src="images/arrowCross3.png"  ng-click="jsonData.toggleVis('weStrive')">
 
 					<ul class="list-container flex" ng-repeat="item in jsonData.data.theology.mission" ng-show="jsonData.visible.weStrive">
 						<li class="list-item"><span>{{ item }}</span></li>
@@ -124,10 +126,10 @@
 				</div>
 
 				<div class="row">
-					<h4>Faith</h4>
+					<h4>Faith
+						<img class="expand-arrow" src="images/arrowCross1.png" alt="expand content arrow" ng-click="jsonData.toggleVis('faith')">
+					</h4>
 					<div class="line thin"></div>
-
-					<img class="expand-arrow" src="images/arrowCross3.png" ng-click="jsonData.toggleVis('faith')">
 
 					<ul class="list-container flex" ng-repeat="item in jsonData.data.theology.faith" ng-show="jsonData.visible.faith">
 						<li><span>{{ item }}</span></li>
@@ -136,11 +138,12 @@
 			</div>
 	  </div>
 
-	  <div class="container" id="staff-container">
-			<h3 class="section-title">Staff</h3>
+	  <div class="container" id="staff">
+			<h3 class="section-title"  ng-click="jsonData.toggleVis('staff')">
+				Staff
+				<span class="expand-arrow"><img src="images/arrowCross1.png" alt="expand content arrow"></span>
+			</h3>
 			<div class="line"></div>
-
-			<button ng-click="jsonData.toggleVis('staff')">show hide</button>
 
 			<div class="flex">
 				<div ng-show="jsonData.visible.staff" class="person-container col" ng-repeat="person in jsonData.data.staff" id="{{ person.id }}" data="{{ person.id }}" ng-click="jsonData.popOver(person.id)">

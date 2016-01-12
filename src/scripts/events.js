@@ -3,9 +3,9 @@
 var scumNav = document.getElementById('scum-nav');
 var scumAbout = document.getElementById('scum-about');
 var theologyNav = document.getElementById('theology-nav');
-var theologyAbout = document.getElementById('theology');
+var theologyAbout = document.getElementById('faith');
 var staffNav = document.getElementById('staff-nav');
-var staffAbout = document.getElementById('staff-container');
+var staffAbout = document.getElementById('staff');
 
 function scrollTo(doc, to, duration) {
 	if (duration < 0) return;
