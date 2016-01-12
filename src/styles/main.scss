@@ -1,13 +1,13 @@
 // main styles
-@import '_extensions';
-@import '_building';
-@import '_menu';
-
 $mainWhite:rgb(223,209,207);
 $brightRed:rgb(217,35,13);
 $medRed:rgba(127,20,8,0.7);
 $marroon:rgb(89,35,29);
 $accentRed:rgb(166,27,10);
+
+@import '_extensions';
+@import '_building';
+@import '_menu';
 
 body{
 	background-image: url("../images/bwBackground.png");
