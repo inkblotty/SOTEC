@@ -1,4 +1,4 @@
-// menu events
+/* MENU EVENTS */
 
 $("a[href^='#']").click(function(e) {
 	e.preventDefault();
