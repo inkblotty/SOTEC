@@ -2,24 +2,17 @@ SOTEC website redesign
 =======================
 
 - General
-  * simplify styling, clean things up
-  * fewer linked pages -- possibly one - two pages with dynamic content?
-
-  ** easier to edit information -- create json file with data?
+  * mobile friendly
+  * work with expand arrows and rotation
 
 - About Section
   * image carousel linked to dropbox
-  * description with contact info
-  * map coloration changed to grayscale
 
 - Theology Section
-  * expandable info with cross-arrows
+  * updated content?
 
 - Staff Section
-  * expandable info with cross-arrows
-  * redesign to be grid of profile pictures with names
-     - details expand into popOver on click
-  * new captions needed for staff, list of who to include and what titles
+  * tooltip on click for email icon
 
 - Calendar
   * ideally stand-alone -- not linked to google account
