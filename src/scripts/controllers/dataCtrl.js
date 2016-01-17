@@ -12,7 +12,7 @@ app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 	jsonData.toggleVis = function(sectionName){
 		//console.log(jsonData.visible[sectionName]);
 		jsonData.visible[sectionName] === true ? jsonData.visible[sectionName] = false : jsonData.visible[sectionName] = true;
-		// add rotation to expand-arrow
+		
 	}
 
 	jsonData.popOver = function(data){

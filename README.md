@@ -12,7 +12,7 @@ SOTEC website redesign
   * updated content?
 
 - Staff Section
-  * tooltip on click for email icon
+  * tooltip onclick with email icon
 
 - Calendar
   * ideally stand-alone -- not linked to google account

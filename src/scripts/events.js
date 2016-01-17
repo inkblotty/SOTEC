@@ -7,3 +7,11 @@ $("a[href^='#']").click(function(e) {
 	$('html,body').animate({
 		scrollTop: $(dest).offset().top-10}, 'slow');
 });
+
+$('.expand-arrow').click(function(e) {
+	$(this).toggleClass('active');
+	e.preventDefault();
+});
+
+// problem: should rotate arrow even if the section
+// name is clicked

@@ -68,7 +68,14 @@ input{
 	cursor: pointer;
 	height: 1.5em;
 	margin: 0 auto;
+	transition: 0.75s all ease;
 	width: auto;
+
+	&.active {
+		-webkit-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+						transform: rotate(180deg);
+	}
 }
 
 .line{
