@@ -3,8 +3,15 @@ SOTEC website redesign
 
 - General
   * mobile friendly
-  * work with expand arrows and rotation
+  * make expand arrows user recognizeable ui
+  * instead of display:none, make accordion transition height
+  * make sections visible on menu click
+  * video instead of images -- talk to Mike
+  * new section: Stuff we Do Together
 
+- Stuff We Do Together
+  * new tab for upcoming events -- draw from info.json
+  
 - About Section
   * image carousel linked to dropbox
 
