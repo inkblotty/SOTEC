@@ -13,7 +13,7 @@ SOTEC website redesign
   * icon to full calendar
   
 - About Section
-  * image carousel linked to dropbox
+  * video
 
 - Theology Section
   * updated content?

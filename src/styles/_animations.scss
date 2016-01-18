@@ -1,15 +1,30 @@
 // angular animations
-
+/*
 .animate-show {
-	line-height: 1em;
-	opacity: 1;
+	line-height: 0em;
+	opacity: 0;
+	transition: all linear 0.5s;
 
-	/*&.ng-show {
+	&.ng-show {
 		line-height: 1em;
 		opacity: 1;
-	}*/
+	}
 
 	&.ng-show-add, &.ng-show-remove {
 		transition: all linear 0.5s;
 	}
+}*/
+
+.animate-show {
+  line-height: 1.1em;
+  opacity: 1;
+}
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
 }
