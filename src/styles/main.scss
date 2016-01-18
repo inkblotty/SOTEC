@@ -8,6 +8,8 @@ $accentRed:rgb(166,27,10);
 @import '_extensions';
 @import '_building';
 @import '_menu';
+@import '_animations';
+//@import '_media';
 
 body{
 	background-image: url("../images/bwBackground.png");
@@ -66,15 +68,14 @@ input{
 
 .expand-arrow{
 	cursor: pointer;
-	height: 1.5em;
-	margin: 0 auto;
-	transition: 0.75s all ease;
-	width: auto;
+	margin-left: 1em;
+	transition: 0.35s all ease;
 
 	&.active {
-		-webkit-transform: rotate(180deg);
-				-ms-transform: rotate(180deg);
-						transform: rotate(180deg);
+		-webkit-transform: rotate(-180deg);
+				-ms-transform: rotate(-180deg);
+				 -o-transform: rotate(-180deg);
+						transform: rotate(-180deg);
 	}
 }
 
@@ -104,6 +105,11 @@ header{
 		img{
 			height: 10em;
 		}
+	}
+
+	a {
+		color: $mainWhite;
+		font-size: 2em;
 	}
 }
 

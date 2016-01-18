@@ -3,14 +3,14 @@ SOTEC website redesign
 
 - General
   * mobile friendly
-  * make expand arrows user recognizeable ui
   * instead of display:none, make accordion transition height
-  * make sections visible on menu click
+  * make sections visible on menu click -- esp staff
   * video instead of images -- talk to Mike
   * new section: Stuff we Do Together
 
 - Stuff We Do Together
-  * new tab for upcoming events -- draw from info.json
+  * new tab for upcoming events -- draw from google calendar automatically
+  * icon to full calendar
   
 - About Section
   * image carousel linked to dropbox
@@ -19,8 +19,8 @@ SOTEC website redesign
   * updated content?
 
 - Staff Section
-  * tooltip onclick with email icon
+  * change email not to icon only but typed out
 
 - Calendar
-  * ideally stand-alone -- not linked to google account
-  * list upcoming events on main page with full calendar elsewhere
+  * bottom cut off
+  * won't update Saturday
