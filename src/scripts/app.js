@@ -1,1 +1,1 @@
-var app = angular.module('scummyApp', ['ngMaps']);
+var app = angular.module('scummyApp', ['ngMaps', 'ngAnimate']);
