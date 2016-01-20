@@ -20,6 +20,7 @@ SOTEC website redesign
 
 - Staff Section
   * change email not to icon only but typed out
+  * crop Mike's pic closer to face
 
 - Calendar
   * bottom cut off
