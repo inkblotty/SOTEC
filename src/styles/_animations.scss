@@ -4,14 +4,27 @@
   line-height: 1.1em;
   //height: auto;
   //opacity: 1;
-  transition: line-height 0.5s ease-in-out;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove {
+	line-height: 1.1em;
+	//height: auto;
+	//opacity: 1;
 }
 
 .animate-show.ng-hide-add, .animate-show.ng-hide-remove {
-  transition: all 0.5s ease-in-out;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  	 -moz-transition: all ease 0.5s;
+  	 	 -o-transition: all ease 0.5s;
+  display: block !important;
 }
 
-.animate-show.ng-hide-remove-active {
+.animate-show.ng-hide-add,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
   line-height: 0;
   //height: 0;
   //opacity: 0;
