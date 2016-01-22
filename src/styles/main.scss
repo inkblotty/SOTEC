@@ -186,11 +186,16 @@ header{
 		text-transform: lowercase;
 	}
 
-	.slideshow{ border: 1px solid $marroon;
-		height: 20em;
+	.video-cont{
 		margin: 0 auto;
 		text-align: center;
-		width: 80%;
+		width: 100%;
+
+		iframe {
+			max-width: 100%;
+			min-height: 250px;
+			height: auto;
+		}
 	}
 
 	.thin{

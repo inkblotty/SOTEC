@@ -29,7 +29,9 @@
 		<ul>
 			<li id="scum-nav"><a href="#scum-about">Scum</a></li>
 			<div class="line"></div>
-			<li id="theology-nav"><a href="#theology">Theology</a></li>
+			<li id="events-nav"><a href="#events">Events</a></li>
+			<div class="line"></div>
+			<li id="theology-nav"><a href="#theology">Who We Are</a></li>
 			<div class="line"></div>
 			<li id="staff-nav"><a href="#staff">Staff</a></li>
 		</ul>
@@ -103,7 +105,9 @@
 
 			<div class="flex">
 				<div class="row">
-					<div class="dropbox slideshow">images from Scum</div>
+					<div class="video-cont">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/WRsWIuRvyWI" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div>
 
 				<div class="row">
@@ -142,9 +146,9 @@
 	  </div>
 
 	  <div class="container" id="staff">
-			<h3 class="section-title"  ng-click="jsonData.toggleVis('staff')">
+			<h3 class="section-title" >
 				Staff
-				<i class="fa fa-angle-down expand-arrow"></i>
+				<i class="fa fa-angle-down expand-arrow" ng-click="jsonData.toggleVis('staff')"></i>
 			</h3>
 			<div class="line"></div>
 
