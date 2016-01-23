@@ -3,7 +3,7 @@ SOTEC website redesign
 
 - General
   * mobile friendly
-  * make sections visible on menu click -- esp staff
+  * make staff section visible on menu click
   * new section: Stuff we Do Together
 
 - Stuff We Do Together
@@ -15,8 +15,7 @@ SOTEC website redesign
 
 - Staff Section
   * change email not to icon only but typed out
-  * crop Mike's pic closer to face
 
 - Calendar
-  * bottom cut off
+  * bottom cuts off :c
   * won't update Saturday

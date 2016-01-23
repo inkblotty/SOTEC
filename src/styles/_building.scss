@@ -25,6 +25,14 @@
 	margin: -5% auto 2% auto;
 	max-width: 70%;
 
+	i {
+		margin-left: 1em;
+
+		&:hover {
+			color: $brightRed;
+		}
+	}
+
 	::-webkit-input-placeholder{
 		color: rgba(255,255,255,0.6);
 		font-weight: 300;
