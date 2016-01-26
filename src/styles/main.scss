@@ -1,5 +1,5 @@
 // main styles
-$mainWhite:rgb(223,209,207);
+$mainWhite:rgb(242,236,235);
 $brightRed:rgb(217,35,13);
 $medRed:rgba(127,20,8,0.7);
 $marroon:rgb(89,35,29);
@@ -278,9 +278,8 @@ header{
 			background-color: $mainWhite;
 			border-radius: 0.5em;
 			color: #000;
-			height: 96%;
+			height: 90vh;
 			margin: 2vh auto;
-			overflow-y: auto;
 			padding: 2%;
 			width: 85%;
 
@@ -307,8 +306,14 @@ header{
 				}
 			}
 
+			.desc-cont {
+				overflow-y: auto;
+			}
+
 			.person-descr {
+				font-size: 1.1em;
 				text-align: left;
+
 				h4 {
 					margin-bottom: 0.5em;
 				}
@@ -318,13 +323,29 @@ header{
 				}
 			}
 
+			.email {
+				margin-top: 0.5em;
+				margin-bottom: 0.7em;
+
+				i {
+					margin-right: 0.5em;
+				}
+			}
+
 			.col {
 				margin: 2%;
 				width: 50%;
 			}
 
-			img {
-				width: 100%;
+			.profile-img {
+				height: 35em;
+				padding: 0;
+
+				img {
+					max-height: 95%;
+					margin: 0 auto;
+					width: auto;
+				}
 			}
 
 			a {

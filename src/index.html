@@ -166,17 +166,21 @@
 							<div class="col col-top">
 								<div class="person-name">{{ person.name }}</div>
 								<div class="job-title">{{ person.title }}</div>
-								<div class="person-descr" ng-repeat="info in person.description">
-									<h4>{{ info.subtitle }}</h4>
-									<p>{{ info.answer }}</p>
-									<p><a ng-href="{{ info.link }}">{{ info.linkText }}</a></p>
+								<div class="desc-cont">
+									<div class="person-descr" ng-repeat="info in person.description">
+										<h4>{{ info.subtitle }}</h4>
+										<p>{{ info.answer }}</p>
+										<p><a ng-href="{{ info.link }}">{{ info.linkText }}</a></p>
+									</div>
 								</div>
 							</div>
 							<div class="col">
 								<div class="close" ng-click="jsonData.close(); $event.stopPropagation();"><i class="fa fa-times"></i></div>
-								<img ng-src="{{ person.picColor }}">
+								<div class="profile-img">
+									<img ng-src="{{ person.picColor }}">
+								</div>
 								<div class="contact-container">
-						  		<a ng-show="{{ person.contact.email }}" ng-href="{{ person.contact.email }}"><i class="fa fa-envelope-o"></i></a>
+									<div ng-show="person.contact.email" class="email"><i class="fa fa-envelope"></i>{{ person.contact.email }}</div>
 									<a ng-show="{{ person.contact.twitter }}" ng-href="{{ person.contact.twitter }}"><i class="fa fa-twitter"></i></a>
 									<a ng-show="{{ person.contact.facebook }}" ng-href="{{ person.contact.facebook }}"><i class="fa fa-facebook"></i></a>
 									<a ng-show="{{ person.contact.instagram }}" ng-href="{{ person.contact.instagram }}"><i class="fa fa-instagram"></i></a>

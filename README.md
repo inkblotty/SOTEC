@@ -13,9 +13,6 @@ SOTEC website redesign
 - Theology Section
   * updated content?
 
-- Staff Section
-  * change email not to icon only but typed out
-
 - Calendar
   * bottom cuts off :c
   * won't update Saturday
