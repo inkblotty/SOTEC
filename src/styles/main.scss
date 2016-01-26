@@ -20,6 +20,7 @@ body{
 	letter-spacing: 0.07em;
 	margin: 0;
 	width: 99%;
+	z-index: 1;
 }
 
 input{
@@ -270,6 +271,7 @@ header{
 		position: fixed;
 		top: 0;
 		width: 100vw;
+		z-index: 1000;
 
 		.pop-inside {
 			align-items: flex-start;
@@ -278,6 +280,7 @@ header{
 			color: #000;
 			height: 96%;
 			margin: 2vh auto;
+			overflow-y: auto;
 			padding: 2%;
 			width: 85%;
 

@@ -12,7 +12,6 @@ app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 	jsonData.toggleVis = function(sectionName){
 		//console.log(jsonData.visible[sectionName]);
 		jsonData.visible[sectionName] === true ? jsonData.visible[sectionName] = false : jsonData.visible[sectionName] = true;
-		
 	}
 
 	jsonData.popOver = function(data){
@@ -20,6 +19,8 @@ app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 		var popup = person.getElementsByClassName('popup')[0];
 
 		popup['classList'].remove('hidden');
+
+		//console.log(popup);
 	}
 
 	jsonData.close = function(){
