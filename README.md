@@ -7,8 +7,7 @@ SOTEC website redesign
   * new section: Stuff we Do Together
 
 - Stuff We Do Together
-  * new tab for upcoming events -- draw from google calendar automatically
-  * icon to full calendar
+  * banner for special events
 
 - Theology Section
   * updated content?
