@@ -13,5 +13,10 @@ $('.expand-arrow').click(function(e) {
 	e.preventDefault();
 });
 
-// problem: should rotate arrow even if the section
-// name is clicked
+$('#full-cal-link').click(function(e) {
+	$('#calendar-popOver').toggleClass('hidden');
+});
+
+$('#close-cal').click(function(e) {
+	$('#calendar-popOver').toggleClass('hidden');
+});

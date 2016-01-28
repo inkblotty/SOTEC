@@ -28,8 +28,26 @@
 	i {
 		margin-left: 1em;
 
+		&.fa-calendar {
+			margin-right: 0.7em;
+		}
+
+		&.fa-times {
+			top: 2%;
+		}
+
 		&:hover {
 			color: $brightRed;
+		}
+	}
+
+	#full-cal-link {
+		font-size: 0.8em;
+		margin-top: 1em;
+
+		&:hover {
+			color: $brightRed;
+			cursor: pointer;
 		}
 	}
 

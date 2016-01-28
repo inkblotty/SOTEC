@@ -1,6 +1,7 @@
 // reads and controlls the json file, info.json
-app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
+app.controller('dataCtrl', ['$scope', 'dataServ', 'calendarServ', function($scope, dataServ, calendarServ){
 	var jsonData = this;
+	jsonData.events = [];
 
 	jsonData.visible = {
 		staff: false,
@@ -37,5 +38,25 @@ app.controller('dataCtrl', ['$scope', 'dataServ', function($scope, dataServ){
 
   dataServ.success(function(data) {
 		jsonData.data = data;
+	});
+
+	calendarServ.success(function(data) {
+		var items = data.items;
+		items.forEach(function(item) {
+			var newEvent = {
+				start: item.start.date || item.start.dateTime,
+				summary: item.summary
+			};
+			var shouldAdd = true;
+
+			// removes any duplicate/recurring events from appearing multiple times
+			jsonData.events.forEach(function(event) {
+				if (event.summary === newEvent.summary) {
+					shouldAdd = false;
+				}
+			});
+
+			if (shouldAdd) { jsonData.events.push(newEvent); };
+		});
 	});
 }]);

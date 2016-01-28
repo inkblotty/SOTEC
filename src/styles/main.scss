@@ -181,6 +181,64 @@ header{
 
 }
 
+.events-container {
+	.event-banner {
+		border: 1px solid $medRed;
+		height: 20em;
+		margin: 1em auto;
+		width: 80%;
+	}
+
+	i {
+		color: $brightRed;
+		margin: 1em 0;		
+
+		&.fa-circle {
+			
+			font-size: 0.5em;
+			vertical-align: top;
+		}
+
+		&.fa-calendar {
+			margin: 0 0.5em;
+		}
+	}
+
+	#full-cal-link {
+		font-size: 0.8em;
+		margin-top: 1em;
+
+		&:hover {
+			color: $brightRed;
+			cursor: pointer;
+		}	
+	}
+}
+
+#calendar-popOver {
+	background-color: rgba(0,0,0,0.6);
+	left: 0;
+	position: fixed;
+	top: 0;
+	text-align: center;
+	width: 100%;
+
+	i {
+		font-size: 2em;
+		left: 60%;
+		position: fixed;
+
+		&:hover {
+			color: $brightRed;
+			cursor: pointer;
+		}
+	}
+
+	iframe {
+		margin: 6% 0;
+	}
+}
+
 .theology{
 	h4{
 		margin: 0;
