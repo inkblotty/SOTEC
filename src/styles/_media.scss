@@ -1,5 +1,32 @@
+// these queries use paranoida's sass-mediaqueries library
+// github.com/paranoida/sass-mediaqueries
 
+@include mq($max-width: 480px) {
 	body {
-		//background-size: auto 100vh;
+		background-size: auto 100vh;
 	}
 
+	header {
+		margin-left: 8%;
+		h1 {
+			img { // scum logo
+				max-width: 80%;
+			}
+		}
+	}
+
+	// fixing page styles while side menu is open
+	#menu-switch:checked ~ .page-wrap {
+		margin-right: -200px;
+	}
+}
+
+@include mq($max-width: 767px) {
+
+}
+
+@include portrait {
+	body {
+		background-size: auto 100vh;
+	}
+}
