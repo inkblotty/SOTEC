@@ -6,10 +6,17 @@
 		background-size: auto 100vh;
 	}
 
+	.ext-link-button {
+		a {
+			font-size: 0.9em;
+		}
+	}
+
 	header {
 		margin-left: 8%;
 		h1 {
 			img { // scum logo
+				height: auto;
 				max-width: 80%;
 			}
 		}
@@ -18,6 +25,56 @@
 	// fixing page styles while side menu is open
 	#menu-switch:checked ~ .page-wrap {
 		margin-right: -200px;
+	}
+
+	.about-container {
+		.updates {
+			margin-bottom: 2%;
+			width: 100%;
+		}
+	}
+
+	.person-container {
+		width: 30%;
+
+		.popup {
+			a {
+				color: $medRed;
+			}
+
+			.pop-inside {
+				align-items: flex-start;
+				align-content: flex-start;
+				display: flex;
+				flex-wrap: wrap;
+				height: 95vh;
+				justify-content: flex-start;
+				overflow-y: scroll;
+				width: 85%;
+
+				.close {
+					color: $brightRed;
+					margin: 0;
+					padding: 0;
+					right: 1.1em;
+					top: 0.5em;
+				}
+
+				.col {
+					width: 100%;
+				}
+
+				.profile-img {
+					height: 20em;
+
+					img {
+						height: auto;
+						max-height: auto;
+						max-width: 95%;
+					}
+				}
+			}	
+		}
 	}
 }
 
