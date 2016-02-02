@@ -365,7 +365,8 @@ header{
 			}
 
 			.desc-cont {
-				//overflow-y: auto;
+				max-height: 75vh;
+				overflow-y: auto;
 			}
 
 			.person-descr {
