@@ -1,6 +1,20 @@
 // these queries use paranoida's sass-mediaqueries library
 // github.com/paranoida/sass-mediaqueries
 
+// extra large devices
+@include mq($max-width: 1200px) {
+}
+
+// large tablets and desktop
+@include mq($max-width: 992px) {
+}
+
+// large mobile & small tablets
+@include mq($max-width: 768px) {
+	
+}
+
+// small mobile
 @include mq($max-width: 480px) {
 	body {
 		background-size: auto 100vh;
@@ -61,7 +75,8 @@
 				}
 
 				.desc-cont {
-					max-height: auto;
+					max-height: none;
+					margin-left: 2%;
 				}
 
 				.col {
@@ -82,12 +97,49 @@
 	}
 }
 
-@include mq($max-width: 767px) {
-
-}
-
+// 
 @include portrait {
 	body {
 		background-size: auto 100vh;
+	}
+
+	// changes view of popup on tablets 
+	// while in portrait view to be mobile-like
+	.person-container {
+		.popup {
+			.pop-inside {
+				align-items: flex-start;
+				align-content: flex-start;
+				display: flex;
+				flex-wrap: wrap;
+				height: 95vh;
+				justify-content: flex-start;
+				overflow-y: scroll;
+				width: 85%;
+
+				.close {
+					color: $brightRed;
+					right: 2em;
+				}
+
+				.desc-cont {
+					max-height: none;
+					margin-left: 2%;
+				}
+
+				.col {
+					width: 100%;
+				}
+
+				.profile-img {
+
+					img {
+						height: auto;
+						max-height: auto;
+						max-width: 95%;
+					}
+				}
+			}
+		}
 	}
 }
