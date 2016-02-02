@@ -396,12 +396,17 @@ header{
 			}
 
 			.profile-img {
+				align-items: center;
+				align-content: center;
+				display: flex;
 				height: 35em;
 				padding: 0;
 
 				img {
+					height: auto;
 					max-height: 95%;
 					margin: 0 auto;
+					max-width: 100%;
 					width: auto;
 				}
 			}
