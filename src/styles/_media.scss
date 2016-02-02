@@ -1,8 +1,17 @@
 // these queries use paranoida's sass-mediaqueries library
 // github.com/paranoida/sass-mediaqueries
 
-// extra large devices
+// extra large devices ...and smaller
 @include mq($max-width: 1200px) {
+	body {
+		font-size: 1em;
+	}
+
+	.about-container {
+		.updates {
+			width: 60%;
+		}
+	}
 }
 
 // large tablets and desktop
