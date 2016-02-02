@@ -1,6 +1,6 @@
-SOTEC website redesign
+SOTEC website overhaul
 =======================
 
-Redesign of website for Scum of the Earth Church in Denver.
+Redo of website for Scum of the Earth Church in Denver.
 
 Not yet live.
