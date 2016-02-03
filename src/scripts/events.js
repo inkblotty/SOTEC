@@ -12,16 +12,18 @@ $("a[href^='#']").click(function(e) {
 // sets accord-info to display: none on page load
 $('.accord-info').css('display', 'none');
 
-/*
-$('.expand-arrow').click(function(e) {
-	$(this).toggleClass('active');
-	e.preventDefault();
-});*/
-
 $('.info-title').click(function(e) {
 	e.preventDefault();
 	$(this).find('.expand-arrow').toggleClass('active');
 	$(this).siblings('.accord-info').slideToggle();
+/*
+	if ($(this).find('h3').html() === 'Staff
+				<i class="fa fa-angle-down expand-arrow"></i>') {
+		console.log('opening staff section');
+		var dest = $(this).attr('href');
+		$('html,body').animate({
+		scrollTop: $(dest).offset().top-10}, 'slow');
+	};*/
 });
 
 // Calendar Events
