@@ -8,7 +8,7 @@ $accentRed:rgb(166,27,10);
 @import '_extensions';
 @import '_building';
 @import '_menu';
-@import '_animations';
+//@import '_animations';
 @import '_media-queries';
 
 body{
@@ -127,6 +127,10 @@ header{
 		letter-spacing: 0.08em;
 		margin: 0;
 		text-transform: lowercase;
+
+		&.info-title {
+			cursor: pointer;
+		}
 	}
 
 	p{
