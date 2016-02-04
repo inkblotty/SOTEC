@@ -8,6 +8,13 @@ $("a[href^='#']").click(function(e) {
 		scrollTop: $(dest).offset().top-10}, 'slow');
 });
 
+// opens staff container on menu click
+$('#staff-link').click(function(e) {
+	e.preventDefault();
+	$('#staff').find('.expand-arrow').addClass('active');
+	$('#staff').find('.accord-info').slideDown();
+});
+
 /* ACCORDION INFO EVENTS */
 // sets accord-info to display: none on page load
 $('.accord-info').css('display', 'none');
@@ -16,14 +23,6 @@ $('.info-title').click(function(e) {
 	e.preventDefault();
 	$(this).find('.expand-arrow').toggleClass('active');
 	$(this).siblings('.accord-info').slideToggle();
-/*
-	if ($(this).find('h3').html() === 'Staff
-				<i class="fa fa-angle-down expand-arrow"></i>') {
-		console.log('opening staff section');
-		var dest = $(this).attr('href');
-		$('html,body').animate({
-		scrollTop: $(dest).offset().top-10}, 'slow');
-	};*/
 });
 
 /* CALENDAR EVENTS */
@@ -32,9 +31,9 @@ $('#calendar-popOver').css('display', 'none');
 
 $('#full-cal-link').click(function(e) {
 	console.log('opening calendar');
-	$('#calendar-popOver').fadeToggle('slow', 'linear');
+	$('#calendar-popOver').fadeToggle('fast', 'linear');
 });
 
 $('#close-cal').click(function(e) {
-	$('#calendar-popOver').fadeToggle('slow', 'linear');
+	$('#calendar-popOver').fadeToggle('fast', 'linear');
 });
