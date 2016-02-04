@@ -159,6 +159,7 @@ header{
 		margin-top: 2%;
 		width: 50%;
 
+/*
 		.events{
 			div{ 
 				vertical-align: center;
@@ -171,7 +172,7 @@ header{
 				margin: 0 1%;
 				vertical-align: top;
 			}
-		}
+		}*/
 
 		.building-link{
 			@extend .ext-link-button;
@@ -188,10 +189,14 @@ header{
 
 .events-container {
 	.event-banner {
-		border: 1px solid $medRed;
-		height: 20em;
+		height: auto;
 		margin: 1em auto;
-		width: 80%;
+		max-width: 100%;
+		text-align: center;
+
+		img {
+			margin: 0 auto;
+		}
 	}
 
 	i {
