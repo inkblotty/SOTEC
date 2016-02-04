@@ -26,11 +26,15 @@ $('.info-title').click(function(e) {
 	};*/
 });
 
-// Calendar Events
+/* CALENDAR EVENTS */
+// sets opacity of calendar popup to 0 on page load
+$('#calendar-popOver').css('display', 'none');
+
 $('#full-cal-link').click(function(e) {
-	$('#calendar-popOver').toggleClass('hidden');
+	console.log('opening calendar');
+	$('#calendar-popOver').fadeToggle('slow', 'linear');
 });
 
 $('#close-cal').click(function(e) {
-	$('#calendar-popOver').toggleClass('hidden');
+	$('#calendar-popOver').fadeToggle('slow', 'linear');
 });
