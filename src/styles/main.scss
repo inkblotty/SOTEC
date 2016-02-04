@@ -346,8 +346,9 @@ header{
 			background-color: $mainWhite;
 			border-radius: 0.5em;
 			color: #000;
-			height: 90vh;
+			height: 88vh;
 			margin: 2vh auto;
+			max-height: 88vh;
 			padding: 2%;
 			width: 85%;
 
@@ -410,12 +411,12 @@ header{
 				align-items: center;
 				align-content: center;
 				display: flex;
-				height: 35em;
+				height: 75vh;
 				padding: 0;
 
 				img {
 					height: auto;
-					max-height: 95%;
+					max-height: 100%;
 					margin: 0 auto;
 					max-width: 100%;
 					width: auto;
