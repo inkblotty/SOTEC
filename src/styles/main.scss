@@ -194,7 +194,9 @@ header{
 		text-align: center;
 
 		img {
+			height: auto;
 			margin: 0 auto;
+			max-width: 100%;
 		}
 	}
 
@@ -226,20 +228,24 @@ header{
 
 #calendar-popOver {
 	background-color: rgba(0,0,0,0.6);
+	height: 100vh;
 	left: 0;
 	position: fixed;
 	top: 0;
 	text-align: center;
 	width: 100%;
 
-	i {
-		font-size: 2em;
+	#close-cal {
 		left: 60%;
 		position: fixed;
 
-		&:hover {
-			color: $brightRed;
-			cursor: pointer;
+		i {
+			font-size: 2em;
+
+			&:hover {
+				color: $brightRed;
+				cursor: pointer;
+			}
 		}
 	}
 

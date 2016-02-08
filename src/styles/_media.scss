@@ -16,6 +16,36 @@
 
 // large tablets and desktop
 @include mq($max-width: 992px) {
+	#calendar-popOver {
+		#close-cal {
+			left: 80%;
+			top: 0;
+
+			i {
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		iframe {
+			margin-top: 10%;
+		}
+	}
+
+	.container.form-container {
+		#close-cal {
+			i {
+				color: $brightRed;
+			}
+		}
+
+		.time-sect {
+			label {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
 }
 
 // large mobile & small tablets
@@ -103,6 +133,11 @@
 				}
 			}	
 		}
+	}
+
+	// building req page
+	.container.form-container {
+		margin-top: 0;
 	}
 }
 

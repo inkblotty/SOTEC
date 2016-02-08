@@ -30,7 +30,7 @@ $('.info-title').click(function(e) {
 $('#calendar-popOver').css('display', 'none');
 
 $('#full-cal-link').click(function(e) {
-	console.log('opening calendar');
+	//console.log('opening calendar');
 	$('#calendar-popOver').fadeToggle('fast', 'linear');
 });
 
