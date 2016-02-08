@@ -16,6 +16,16 @@
 
 // large tablets and desktop
 @include mq($max-width: 992px) {
+	.person-container {
+		.popup {
+			.pop-inside {
+				.profile-img {
+					height: auto;
+				}
+			}
+		}
+	}
+
 	#calendar-popOver {
 		#close-cal {
 			left: 80%;
