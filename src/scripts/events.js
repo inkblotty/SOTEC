@@ -4,6 +4,11 @@ $("a[href^='#']").click(function(e) {
 	e.preventDefault();
 	var dest = $(this).attr('href');
 	//console.log(dest);
+	// move to separate function
+	if(window.innerWidth <= 800 || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+		$('#menu-switch').prop("checked", false);
+	}
+
 	$('html,body').animate({
 		scrollTop: $(dest).offset().top-10}, 'slow');
 });
