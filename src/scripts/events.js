@@ -1,3 +1,5 @@
+$('#no-JS').hide();
+
 /* MENU EVENTS */
 
 $("a[href^='#']").click(function(e) {

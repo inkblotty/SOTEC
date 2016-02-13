@@ -23,6 +23,30 @@ body{
 	z-index: 1;
 }
 
+#no-JS {
+	background-color: black;
+	color: $mainWhite;
+	height: 100vh;
+	margin: 0;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 1500;
+
+	img {
+		margin: 4% auto 1% auto;
+		height: 60vh;
+	}
+	.loc, .email {
+		font-size: 0.8em;
+	}
+	.error {
+		font-size: 1.6em;
+		margin-top: 2%;
+	}
+}
+
 input{
 	color: $mainWhite;
 }
