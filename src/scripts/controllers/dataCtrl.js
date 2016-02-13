@@ -21,6 +21,9 @@ app.controller('dataCtrl', ['$scope', 'dataServ', 'calendarServ', function($scop
 
 		popup['classList'].remove('hidden');
 
+		var page = document.getElementsByTagName('body')[0];
+		page.style['overflow'] = 'hidden';
+		page.style.height = '100%';
 		//console.log(popup);
 	}
 
@@ -30,6 +33,10 @@ app.controller('dataCtrl', ['$scope', 'dataServ', 'calendarServ', function($scop
 		for (var i=0; i<popups.length; i++){
 			popups[i].className = "popup hidden";
 		}
+
+		var page = document.getElementsByTagName('body')[0];
+		page.style['overflow'] = 'auto';
+		page.style.height = 'auto';
 	}
 
 	jsonData.changeImg = function(element, newUrl){
