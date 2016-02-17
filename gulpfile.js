@@ -71,7 +71,7 @@ gulp.task('finalScripts', function(){
 		.pipe(gulp.dest('./build/scripts/libraries/'));
 	gulp.src(['./src/scripts/app.js', './src/scripts/filters/*.js', './src/scripts/services/*.js', './src/scripts/controllers/*.js', '.src/scripts/*.js'])
 	  .pipe(ngAnnotate())
-	  .pipe(strigDebug())
+	  .pipe(stripDebug())
 	  .pipe(uglify())
 	  .pipe(concat('script.js'))
 	  .pipe(gulp.dest('./build/scripts/'));
@@ -91,9 +91,15 @@ gulp.task('styles', function() {
 // browsersync
 gulp.task('browser-sync', function(){
   browserSync.init({
-  server: {
-            baseDir: "./build/"
-        }
+  	server: {
+            baseDir: "./build/",
+            middleware: function (req, res, next) {
+            	console.log('Adding CORS header for ' + req.method + ': ' + req.url);
+            	res.setHeader('Access-Control-Allow-Origin', '*');
+            	next();
+            }
+        },
+    logConnections: true
   });
   gulp.watch('./src/*.json', ['moveJSON']).on('change', browserSync.reload);
   gulp.watch('./src/*.html', ['htmlpage']).on('change', browserSync.reload);
