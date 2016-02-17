@@ -1,5 +1,6 @@
 $('#no-JS').hide();
 $('#no-JS').attr('height', '0');
+$('#no-JS').attr('width', '0');
 $('#no-JS').attr('overflow', 'hidden');
 
 /* MENU EVENTS */
