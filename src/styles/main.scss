@@ -265,7 +265,7 @@ header{
 		}
 	}
 
-	#full-cal-link {
+	.event-btn {
 		font-size: 0.8em;
 		margin-top: 2em;
 		text-align: center;
@@ -273,6 +273,10 @@ header{
 		i {
 			font-size: 1em;
 			transition: 0.5s ease all;
+
+			&.fa-facebook-square {
+				margin: 0 0.3em 0 0.2em;
+			}
 		}
 
 		a {
@@ -378,6 +382,11 @@ header{
 
 			.list-item{
 				width: 100%;
+
+				&.sub {
+					list-style-type: none;
+					margin-left: -3%;
+				}
 			}
 		}
 	}

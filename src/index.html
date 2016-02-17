@@ -118,7 +118,9 @@
 				</tr>
 			</table>
 
-			<div class="ext-link-button" id="full-cal-link"><a><i class="fa fa-calendar"></i>show full calendar</a></div>
+			<div class="ext-link-button event-btn" id="full-cal-link"><a><i class="fa fa-calendar"></i>show full calendar</a></div>
+
+			<div class="ext-link-button event-btn"><a ng-href="{{jsonData.data.about.contact.facebook}}"><i class="fa fa-facebook-square"></i>events on our facebook</a></div>
 
 			<div id="calendar-popOver">
 				<div id="close-cal"><i class="fa fa-times"></i></div>
@@ -142,7 +144,7 @@
 
 				<div class="row">
 					<h4 class="info-title">
-						Why Scum?
+						Why "Scum"?
 						<i class="fa fa-angle-down expand-arrow"></i>
 					</h4>
 					<div class="line thin"></div>
@@ -154,13 +156,13 @@
 
 				<div class="row">
 					<h4 class="info-title">
-						We strive to be a church who...
+						Mission Statement
 						<i class="fa fa-angle-down expand-arrow"></i>
 					</h4>
 					<div class="line thin"></div>
 
 					<ul class="accord-info list-container flex" ng-repeat="item in jsonData.data.theology.mission">
-						<li class="list-item"><span>{{ item }}</span></li>
+						<li ng-class='{sub:$first}' class="list-item"><span>{{ item }}</span></li>
 					</ul>
 				</div>
 
@@ -216,7 +218,7 @@
 									<a ng-show="person.contact.twitter" ng-href="{{ person.contact.twitter }}"><i class="fa fa-twitter"></i></a>
 									<a ng-show="person.contact.facebook" ng-href="{{ person.contact.facebook }}"><i class="fa fa-facebook"></i></a>
 									<a ng-show="person.contact.instagram" ng-href="{{ person.contact.instagram }}"><i class="fa fa-instagram"></i></a>
-									<a ng-href="{{ person.donateLink }}"><i class="fa fa-paypal"></i></a>
+									<a ng-href="{{ person.donateLink }}"><i class="fa fa-cc-paypal"></i></a>
 								</div>
 							</div>
 						</div>
