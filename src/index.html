@@ -67,7 +67,9 @@
 				<div class="services subsection">
 					<h4>service times</h4>
 					<div class="line thin"></div>
-					<p>{{ jsonData.data.about.services }}</p>
+					<div ng-repeat="line in jsonData.data.about.services">
+						<p ng-class='{note:$last}'>{{ line }}</p>
+					</div>
 				</div>
 
 				<div class="sermons">
