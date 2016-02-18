@@ -99,7 +99,6 @@ gulp.task('browser-sync', function(){
             	next();
             }
         },
-    open: 'external',
     logConnections: true
   });
   gulp.watch('./src/*.json', ['moveJSON']).on('change', browserSync.reload);
