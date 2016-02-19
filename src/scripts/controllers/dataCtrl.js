@@ -48,6 +48,8 @@ app.controller('dataCtrl', ['$scope', 'dataServ', 'calendarServ', function($scop
 	});
 
 	calendarServ.success(function(data) {
+		//console.log(data);
+
 		var items = data.items;
 		items.forEach(function(item) {
 			var newEvent = {
