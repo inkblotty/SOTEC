@@ -66,8 +66,7 @@
 // small mobile
 @include mq($max-width: 480px) {
 	body {
-		background-position: center;
-		background-repeat: no-repeat;
+		background: url("../images/bwBackgroundProfile.png") no-repeat center center fixed;
 		background-size: cover;
 	}
 
@@ -156,7 +155,8 @@
 // 
 @include portrait {
 	body {
-		background-size: auto 100vh;
+		background-size: cover;
+		background-image: url("../images/bwBackgroundProfile.png")
 	}
 
 	// changes view of popup on tablets 
