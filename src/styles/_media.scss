@@ -66,7 +66,9 @@
 // small mobile
 @include mq($max-width: 480px) {
 	body {
-		background-size: auto 100vh;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	.ext-link-button {
