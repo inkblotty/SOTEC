@@ -11,7 +11,7 @@ $accentRed:rgb(166,27,10);
 @import '_media-queries';
 
 body{
-	background-color: black;
+	background-color: #000;
 	background-image: url("../images/bwBackground.png");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -545,6 +545,22 @@ header{
 
 	.google-map{
 		height: 200px;
+	}
+}
+
+.footer {
+	color: darken(#fff, 50%);
+	margin: 5% 0 0 0;
+	text-align: center;
+	width: 100%;
+
+	a {
+		color: darken(#fff, 50%);
+		text-decoration: none;
+
+		&:hover {
+			color: $mainWhite;
+		}
 	}
 }
 
