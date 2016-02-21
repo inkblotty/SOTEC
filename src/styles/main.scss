@@ -24,6 +24,19 @@ body{
 	z-index: 1;
 }
 
+#mobile-back {
+	background-color: transparent;
+	background-image: url("../images/bwBackgroundProfile.png") 0 0 no-repeat fixed !important;
+	background-size: cover;
+	display: none;
+	position: fixed;
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
 #no-JS {
 	background-color: black;
 	color: $mainWhite;

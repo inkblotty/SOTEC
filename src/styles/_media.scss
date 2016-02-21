@@ -70,10 +70,12 @@
 // small mobile
 @include mq($max-width: 480px) {
 	body {
-		background: url("../images/bwBackgroundProfile.png") no-repeat center center fixed;
-		background-size: cover;
-		background-color: #000;
-		height: 100%;
+		background-image: none;
+		background-color: transparent;
+	}
+
+	#mobile-back {
+		display: inline-block;
 	}
 
 	.ext-link-button {

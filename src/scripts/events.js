@@ -3,9 +3,11 @@ $('#no-JS').attr('height', '0');
 $('#no-JS').attr('width', '0');
 $('#no-JS').attr('overflow', 'hidden');
 
+/*
 if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
 	$('body').css('background-image', 'none');
 }
+*/
 
 /* MENU EVENTS */
 
