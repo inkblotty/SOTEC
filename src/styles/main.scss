@@ -11,6 +11,7 @@ $accentRed:rgb(166,27,10);
 @import '_media-queries';
 
 body{
+	background-attachment: fixed;
 	background-color: #000;
 	background-image: url("../images/bwBackground.png");
 	background-attachment: fixed;
@@ -25,7 +26,7 @@ body{
 }
 
 #mobile-back {
-	background-color: transparent;
+	background-attachment: fixed;
 	background-image: url("../images/bwBackgroundProfile.png") 0 0 no-repeat fixed !important;
 	background-size: cover;
 	display: none;
