@@ -67,11 +67,58 @@
 	
 }
 
+// 
+@include portrait {
+	body {
+		background-size: cover;
+		background-image: url("../images/bwBackgroundProfile.png")
+	}
+
+	// changes view of popup on tablets 
+	// while in portrait view to be mobile-like
+	.person-container {
+		.popup {
+			.pop-inside {
+				align-items: flex-start;
+				align-content: flex-start;
+				display: flex;
+				flex-wrap: wrap;
+				height: 95vh;
+				justify-content: flex-start;
+				overflow-y: scroll;
+				width: 85%;
+
+				.close {
+					color: $brightRed;
+					right: 2em;
+				}
+
+				.desc-cont {
+					max-height: none;
+					margin-left: 2%;
+				}
+
+				.col {
+					width: 100%;
+				}
+
+				.profile-img {
+
+					img {
+						height: auto;
+						max-height: auto;
+						max-width: 95%;
+					}
+				}
+			}
+		}
+	}
+}
+
 // small mobile
 @include mq($max-width: 480px) {
 	body {
 		background-image: none;
-		background-color: transparent;
 	}
 
 	#mobile-back {
@@ -157,53 +204,5 @@
 	// building req page
 	.container.form-container {
 		margin-top: 0;
-	}
-}
-
-// 
-@include portrait {
-	body {
-		background-size: cover;
-		background-image: url("../images/bwBackgroundProfile.png")
-	}
-
-	// changes view of popup on tablets 
-	// while in portrait view to be mobile-like
-	.person-container {
-		.popup {
-			.pop-inside {
-				align-items: flex-start;
-				align-content: flex-start;
-				display: flex;
-				flex-wrap: wrap;
-				height: 95vh;
-				justify-content: flex-start;
-				overflow-y: scroll;
-				width: 85%;
-
-				.close {
-					color: $brightRed;
-					right: 2em;
-				}
-
-				.desc-cont {
-					max-height: none;
-					margin-left: 2%;
-				}
-
-				.col {
-					width: 100%;
-				}
-
-				.profile-img {
-
-					img {
-						height: auto;
-						max-height: auto;
-						max-width: 95%;
-					}
-				}
-			}
-		}
 	}
 }
