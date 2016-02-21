@@ -16,6 +16,10 @@
 
 // large tablets and desktop
 @include mq($max-width: 992px) {
+	body {
+		background-color: #000;
+	}
+
 	.person-container {
 		.popup {
 			.pop-inside {
