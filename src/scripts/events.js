@@ -32,6 +32,12 @@ $('#staff-link').click(function(e) {
 	$('#staff').find('.accord-info').slideDown();
 });
 
+$('#scoop-link').click(function(e) {
+	e.preventDefault();
+	$('#scoop').find('.expand-arrow').addClass('active');
+	$('#scoop').find('.accord-info').slideDown();
+})
+
 /* ACCORDION INFO EVENTS */
 // sets accord-info to display: none on page load
 $('.accord-info').css('display', 'none');
