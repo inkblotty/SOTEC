@@ -197,19 +197,33 @@
 	  	</h3>
 	  	<div class="line"></div>
 
-	  	<div class="accord-info flex">
-	  		<h4>{{ jsonData.data.scoop.title }}</h4>
+	  	<h4>{{ jsonData.data.scoop.title }}</h4>
 
+	  	<div class="accord-info flex">
 	  		<h3>{{ jsonData.data.scoop.newest.subtitle }}</h3>
 	  		<div class="line thin"></div>
 
 	  		<div class="byline">
 	  			<span class="author">{{ jsonData.data.scoop.newest.author }}</span>
+	  			<i class="fa fa-circle"></i>
 	  			<span class="pub-date">{{ jsonData.data.scoop.newest.date | date: shortDate }}</span>
 	  		</div>
 
-	  		<div class="article" ng-repeat="paragraph in jsonData.data.scoop.newest.article">
-	  			{{ paragraph }}
+	  		<div class="article">
+	  			<p>{{ jsonData.data.scoop.newest.article[0] }}</p>
+
+					<div class="mission"><img ng-src="{{ jsonData.data['mission-img'] }}" alt="scum of the earth church mission statement: Scum of the Earth Church is an outpost on the perimeter of God's kingdom finding redemption in Jesus Christ"></div>
+					<div class="caption">{{ jsonData.data.scoop.newest.captions[0] }}</div>
+
+	  			<div ng-class="{'hidden':$first,'hidden':$last}" ng-repeat="paragraph in jsonData.data.scoop.newest.article">
+						<p>{{ paragraph }}</p>
+					</div>
+
+					<div class="footer-link">
+						<a ng-href="{{ jsonData.data.staff[0].description[3].link }}">
+							{{ jsonData.data.scoop.newest.article[6] }}
+						</a>
+					</div>
 	  		</div>
 	  	</div>
 	  </div>
