@@ -102,6 +102,10 @@ input{
 			line-height: 1.4em;
 			margin-right: 2%;
 			vertical-align: middle;
+
+			&#apple {
+				font-size: 1.5em;
+			}
 		}
 	}
 }
@@ -221,14 +225,20 @@ header{
 		}*/
 
 		.building-link{
+			margin: 1.5% 0;
+
 			@extend .ext-link-button;
 		}
 	}
 
 	.sermons {
-		margin: 3% 0;
+		margin: 1.5% 0;
 
 		@extend .ext-link-button;
+
+		&:first-child {
+			margin-top: 3%;
+		}
 	}
 
 }

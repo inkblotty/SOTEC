@@ -94,7 +94,7 @@ gulp.task('browser-sync', function(){
   	server: {
             baseDir: "./build/",
             middleware: function (req, res, next) {
-            	console.log('Adding CORS header for ' + req.method + ': ' + req.url);
+            	//console.log('Adding CORS header for ' + req.method + ': ' + req.url);
             	res.setHeader('Access-Control-Allow-Origin', '*');
             	next();
             }
