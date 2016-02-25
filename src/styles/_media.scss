@@ -205,4 +205,17 @@
 	.container.form-container {
 		margin-top: 0;
 	}
+
+	// scoop
+	#scoop {
+		.byline {
+			font-size: 0.75em;
+		}
+
+		.mission {
+			img {
+				width: 100%;
+			}
+		}
+	}
 }
