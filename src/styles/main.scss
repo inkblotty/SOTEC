@@ -210,6 +210,10 @@ header{
 		margin-top: 2%;
 		width: 50%;
 
+		div {
+			margin: 2% 0;
+		}
+
 /*
 		.events{
 			div{ 
@@ -226,19 +230,34 @@ header{
 		}*/
 
 		.building-link{
-			margin: 1.5% 0;
 
 			@extend .ext-link-button;
+
+			a {
+				display: block;
+				margin: 1.5% 0;
+				padding: 1% 2%;
+			}
 		}
 	}
 
 	.sermons {
-		margin: 1.5% 0;
+		text-align: center;
 
 		@extend .ext-link-button;
 
 		&:first-child {
 			margin-top: 3%;
+
+			a {
+				padding: 1% 2%;
+			}
+		}
+
+		a {
+			display: block;
+			margin: 1.5% 0;
+			padding: 1.5% 2%;
 		}
 	}
 
