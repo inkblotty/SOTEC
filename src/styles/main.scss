@@ -103,10 +103,6 @@ input{
 			line-height: 1.4em;
 			margin-right: 2%;
 			vertical-align: middle;
-
-			&#apple {
-				font-size: 1.5em;
-			}
 		}
 	}
 }
@@ -232,7 +228,12 @@ header{
 			a {
 				display: block;
 				margin: 1.5% 0;
-				padding: 1% 2%;
+				height: 2em;
+				vertical-align: top;
+
+				i {
+					font-size: 1.5em;
+				}
 			}
 		}
 	}
@@ -246,14 +247,19 @@ header{
 			margin-top: 3%;
 
 			a {
-				padding: 1% 2%;
+				vertical-align: top;
 			}
 		}
 
 		a {
 			display: block;
 			margin: 1.5% 0;
-			padding: 1.5% 2%;
+			height: 2em;
+			vertical-align: center;
+
+			i {
+				font-size: 1.5em;
+			}
 		}
 	}
 
