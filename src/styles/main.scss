@@ -295,6 +295,11 @@ header{
 			margin: 0;
 			padding: 0;
 
+			td i {
+				margin-left: 1em;
+				margin-right: 1em;
+			}
+
 			&:last-child {
 				border-bottom: 0px solid black;
 			}
