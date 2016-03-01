@@ -48,8 +48,7 @@ app.controller('dataCtrl', ['$scope', 'dataServ', 'calendarServ', function($scop
 	});
 
 	calendarServ.success(function(data) {
-		//console.log(data);
-
+		
 		var items = data.items;
 		items.forEach(function(item) {
 			var newEvent = {
@@ -58,12 +57,13 @@ app.controller('dataCtrl', ['$scope', 'dataServ', 'calendarServ', function($scop
 			};
 			var shouldAdd = true;
 
+			/*
 			// removes any duplicate/recurring events from appearing multiple times
 			jsonData.events.forEach(function(event) {
 				if (event.summary === newEvent.summary) {
 					shouldAdd = false;
 				}
-			});
+			});*/
 
 			if (shouldAdd) { jsonData.events.push(newEvent); };
 		});
