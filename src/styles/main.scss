@@ -198,13 +198,41 @@ header{
 		margin-right: 2%;
 	}
 
-	.note {
-		font-size: 0.8em;
+	.location-stuff {
+		text-align: center;
+	}
+
+	.contact-links {
+		margin-top: 0.5em;
+		text-align: center;
+
+		a {
+			color: $brightRed;
+			margin: 0 0.25em;
+
+			&:hover {
+				color: $mainWhite;
+			}
+
+			i {
+				font-size: 1.5em;
+			}
+		}
 	}
 
 	.updates{
 		margin-top: 2em;
 		width: 50%;
+
+		.services {
+			p {
+				font-size: 0.8em;
+
+				&.serv {
+					font-size: 1em;
+				}
+			}
+		}
 
 /*
 		.events{
