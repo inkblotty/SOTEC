@@ -19,6 +19,14 @@
 			margin-bottom: 0;
 		}
 
+		p {
+			&.quoted {
+				font-weight: 300;
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+		}
+
 		.mission {
 			margin: 0;
 			padding: 0;
