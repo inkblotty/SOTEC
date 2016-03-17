@@ -433,20 +433,29 @@ header{
 		margin: 0 auto 2% auto;
 		width: 90%;
 
-		.mission {
-			display: flex;
-			align-content: center;
-			align-items: center;
-			justify-content: center;
-			margin: 2% auto 0 auto;
-			padding: 0;
-			
-			img {
-				height: auto;
-				margin: 0;
-				max-width: 100%;
-				padding: 0;
-				width: 40em;
+		.caption {
+			color: $brightRed;
+			font-size: 0.8em;
+			margin: -3% auto 3% auto;
+			text-align: center;
+		}
+
+		&.vision {
+			.article {
+				margin: 0 2%;
+			}
+
+			.footer {
+				cursor: pointer;
+				text-align: center;
+
+				a {
+					cursor: pointer;
+
+					&:hover {
+						color: $brightRed;
+					}
+				}
 			}
 		}
 

@@ -54,7 +54,7 @@
 
 		<header>
 		<a class="anchor" href="#scum-about">
-			<h1><img ng-src="{{ jsonData.data.logo }}" alt="Scum of the Earth Church logo"></h1>
+			<h1><img src="images/logo1.png" ng-src="{{ jsonData.data.logo }}" alt="Scum of the Earth Church logo"></h1>
 			<h3>Denver, CO</h3>
 			<i class="fa fa-angle-double-down"></i>
 		</a>
@@ -183,6 +183,27 @@
 					<ul class="accord-info list-container flex" ng-repeat="item in jsonData.data.theology.mission">
 						<li ng-class='{sub:$first}' class="list-item"><span>{{ item }}</span></li>
 					</ul>
+				</div>
+
+				<div class="row vision">
+					<h4 class="info-title">
+						Vision Statement
+						<i class="fa fa-angle-down expand-arrow"></i>
+					</h4>
+					<div class="line thin"></div>
+
+					<div class="accord-info list-container flex article">
+						<p>{{jsonData.data.theology.vision.article[0]}}</p>
+
+						<div class="vision-img"><img ng-src="{{ jsonData.data['mission-img'] }}" alt="scum of the earth church mission statement: Scum of the Earth Church is an outpost on the perimeter of God's kingdom finding redemption in Jesus Christ"></div>
+						<div class="caption">{{jsonData.data.theology.vision.caption}}</div>
+
+						<div ng-repeat="paragraph in jsonData.data.theology.vision.article" ng-class="{'hidden':$last}" ng-if="$index>=1">
+							<p>{{ paragraph }}</p>
+						</div>
+
+						<p class="footer"><a ng-href="http://www.ivpress.com/cgi-ivpress/book.pl/code=3629">{{jsonData.data.theology.vision.article[6]}}</a></p>
+					</div>
 				</div>
 
 				<div class="row">
