@@ -239,15 +239,19 @@
 	  		</div>
 
 	  		<div class="article">
-	  			<!--
 	  			<p>{{ jsonData.data.scoop.newest.article[0] }}</p>
 
+	  			<div class="poem caption" ng-repeat="line in jsonData.data.scoop.newest.captions" ng-class="{'bigger':$first}">
+	  				{{line}}
+	  			</div>
+
+<!--
 					<div class="mission"><img ng-src="{{ jsonData.data['mission-img'] }}" alt="scum of the earth church mission statement: Scum of the Earth Church is an outpost on the perimeter of God's kingdom finding redemption in Jesus Christ"></div>
 					<div class="caption">{{ jsonData.data.scoop.newest.captions[0] }}</div>
 
 					// for below p: ng-class="{'hidden': $last}" ng-if="$index >= 1" 
 -->
-	  			<p ng-repeat="paragraph in jsonData.data.scoop.newest.article" ng-class="{'quoted': $middle}">
+	  			<p ng-repeat="paragraph in jsonData.data.scoop.newest.article" ng-class="{'hidden': $first}">
 					{{ paragraph }}
 					</p>
 
