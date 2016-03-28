@@ -32,6 +32,15 @@
 			font-weight: 400;
 			margin-top: 0.25em;
 			padding: 0.5em 1em;
+
+			a {
+				color: $brightRed;
+				text-decoration: none;
+
+				&:hover {
+					color: $mainWhite;
+				}
+			}
 		}
 	}
 
