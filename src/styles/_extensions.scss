@@ -8,6 +8,25 @@
   margin: 0;
 }
 
+.btn {
+	border: 2px solid $brightRed;
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 0.25em;
+	color: $brightRed;
+	cursor: pointer;
+	font-size: 1.1em;
+	letter-spacing: 0.1em;
+	padding: 1%;
+
+	transition: all 0.5s ease;
+
+	&:hover{
+		background-color: $medRed;
+		border: 2px solid $medRed;
+		color: $mainWhite;
+	}
+}
+
 .flex-col{
 	display: flex;
 	flex-wrap: nowrap;

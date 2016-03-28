@@ -7,11 +7,27 @@
 		}
 	}
 
+	.btn {
+		padding: 0.25em;
+		vertical-align: middle;
+		width: auto;
+	}
+
 	h4 {
+		display: flex;
+		flex-wrap: wrap;
 		font-weight: 300;
+		justify-content: space-between;
 		margin: 0;
 		text-align: left;
 		text-transform: lowercase;
+
+		.btn {
+			display: inline-block;
+			font-size: 0.8em;
+			margin-top: 0.25em;
+			padding: 0.5em 1em;
+		}
 	}
 
 	.accord-info {
@@ -69,6 +85,37 @@
 
 		p {
 			margin: 2% 0.5%;
+		}
+
+		.footer {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+
+			div {
+				margin-right: 1em;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			a {
+				color: $brightRed;
+				display: inline-block;
+				font-size: 1em;
+				padding: 0.3em 0.6em;
+				width: 10em;
+
+				i {
+					display: inline-block;
+					margin-right: 0.4em;
+				}
+
+				&:hover {
+					color: $mainWhite;
+				}
+			}
 		}
 
 		.footer-link {
