@@ -13,6 +13,10 @@
 		width: auto;
 	}
 
+	.article {
+		max-width: 90%;
+	}
+
 	h4 {
 		display: flex;
 		flex-wrap: wrap;
@@ -25,6 +29,7 @@
 		.btn {
 			display: inline-block;
 			font-size: 0.8em;
+			font-weight: 400;
 			margin-top: 0.25em;
 			padding: 0.5em 1em;
 		}
@@ -90,6 +95,7 @@
 		.footer {
 			align-items: center;
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 
 			div {
@@ -102,8 +108,9 @@
 
 			a {
 				color: $brightRed;
-				display: inline-block;
+				//display: inline-block;
 				font-size: 1em;
+				margin: 0.25em;
 				padding: 0.3em 0.6em;
 				width: 10em;
 
