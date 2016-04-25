@@ -248,9 +248,17 @@
 <!--
 					// if needed for below p: ng-class="{'hidden': $last}" ng-if="$index >= 1" 
 -->
-	  			<p ng-repeat="paragraph in jsonData.data.scoop.newest.article" ng-class="{'caption': $first}">
+					<p class="caption">
+						{{jsonData.data.scoop.newest.article[0]}}
+					</p>
+
+	  			<p ng-repeat="paragraph in jsonData.data.scoop.newest.article" ng-if='$index>=1' ng-class="{'poem': $middle}">
 					{{ paragraph }}
 					</p>
+
+					<div class="img-div">
+						<img ng-src='{{jsonData.data.scoop.newest.images[0]}}' alt="Naomi Chamberlain, intern, on mountaintop" />
+					</div>
 				  
 	  		</div>
 	  	</div>

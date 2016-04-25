@@ -15,6 +15,21 @@
 
 	.article {
 		max-width: 90%;
+
+		p {
+			width: 100%;
+		}
+	}
+
+	.img-div {
+		margin: 0 auto;
+		max-height: 30em;
+		max-width: 30em;
+		text-align: center;
+
+		img {
+			width: 100%;
+		}
 	}
 
 	h4 {
