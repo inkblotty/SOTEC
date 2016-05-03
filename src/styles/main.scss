@@ -413,6 +413,17 @@ header{
 		text-transform: lowercase;
 	}
 
+	.gif-container {
+		max-width: 25em;
+		max-width: 25em;
+
+		img {
+			height: 100%;
+			object-fit: contain;
+			width: 100%;
+		}
+	}
+
 	.video-cont{
 		margin: 0 auto;
 		text-align: center;
