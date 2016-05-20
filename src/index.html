@@ -252,13 +252,22 @@
 						{{jsonData.data.scoop.newest.article[0]}}
 					</p>
 
-	  			<p ng-repeat="paragraph in jsonData.data.scoop.newest.article" ng-if='$index>=1' ng-class="{'poem': $middle}">
+	  			<p ng-repeat="paragraph in jsonData.data.scoop.newest.article track by $index" ng-if='$index>=1' ng-class="{'hidden': $index>=22,'space-before':$index===1}">
 					{{ paragraph }}
 					</p>
 
+					<p ng-repeat="paragraph in jsonData.data.scoop.newest.article track by $index" ng-if='$index>=22' ng-class="{'space-before':$index==22,'hidden':$index==39}">
+						{{ paragraph }}
+					</p>
+
+					<p class="space-before">
+						{{jsonData.data.scoop.newest.article[39]}}
+					</p>
+
+					<!--
 					<div class="img-div">
 						<img ng-src='{{jsonData.data.scoop.newest.images[0]}}' alt="Naomi Chamberlain, intern, on mountaintop" />
-					</div>
+					</div>-->
 				  
 	  		</div>
 	  	</div>
