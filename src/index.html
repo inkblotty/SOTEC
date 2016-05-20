@@ -256,7 +256,7 @@
 					{{ paragraph }}
 					</p>
 
-					<p ng-repeat="paragraph in jsonData.data.scoop.newest.article track by $index" ng-if='$index>=22' ng-class="{'space-before':$index==22,'hidden':$index==39}">
+					<p ng-repeat="paragraph in jsonData.data.scoop.newest.article track by $index" ng-if='$index>=22' ng-class="{'space-before':$index==22,'hidden':$index==39,'indent':$index>=30&&$index<33}">
 						{{ paragraph }}
 					</p>
 
