@@ -510,6 +510,25 @@ header{
 				}
 			}
 		}
+
+		.gov-header {
+			color: $brightRed;
+			font-size: 1.1em;
+			font-weight: 300;
+			letter-spacing: 0.1em;
+			margin: 0.5em 0 0 0;
+			text-align: left;
+			width: 100%;
+		}
+
+		.gov-type {
+			margin-left: 5%;
+
+			.gov-sub-header {
+				letter-spacing: 0.1em;
+				margin: 1em 0 0 0;
+			}
+		}
 	}
 }
 

@@ -217,6 +217,43 @@
 						<li><span>{{ item }}</span></li>
 					</ul>
 				</div>
+
+				<div class="row">
+					<h4 class="info-title">
+						Our Church Government
+						<i class="fa fa-angle-down expand-arrow"></i>
+					</h4>
+					<div class="line thin"></div>
+
+					<div class="accord-info">
+						<div class="gov-header">
+							What is church government, generally speaking?
+						</div>
+						<div class="line thin"></div>
+
+						<div>
+							{{ jsonData.data.theology.government['What is church government, generally speaking?'][0] }}
+						</div>
+
+						<div class="list-container flex" ng-repeat="(key, item) in jsonData.data.theology.government['What is church government, generally speaking?'][1]">
+							<div class="gov-type">
+								<div class="gov-sub-header">{{ key }}</div>
+								<div class="line thin"></div>
+								<div>{{ item }}</div>
+							</div>
+						</div>
+
+						<div class="list-container flex" ng-repeat="(key, item) in jsonData.data.theology.government" ng-if="$index>0">
+							<div class="gov-header">{{ key }}</div>
+							<div class="line thin"></div>
+							<div class="list-container flex" ng-repeat="paragraph in item">
+								<p>{{ paragraph }}</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
 			</div>
 	  </div>
 
