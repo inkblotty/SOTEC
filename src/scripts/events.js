@@ -22,7 +22,8 @@ $("a[href^='#']").click(function(e) {
 	}
 
 	$('html,body').animate({
-		scrollTop: $(dest).offset().top-10}, 'slow');
+		scrollTop: $(dest).offset().top-10
+	}, 'slow');
 });
 
 // opens staff container on menu click

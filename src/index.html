@@ -32,6 +32,10 @@
 			Sorry, you need to enable JavaScript to view this website
 		</div>
 	</div>
+
+	<!-- for social media posts -->
+	<img src="images/logo.png" alt="Scum of the Earth Church logo" class="logo hidden">
+
 	<!-- Pure CSS Menu based on codepen by FloSchli -->
 	<input type="checkbox" id="menu-switch">
 	<nav id="menu" role="navigation">
@@ -123,8 +127,14 @@
 			<div class="line"></div>
 
 			<div class="event-banner">
-				<img src="https://dl.dropboxusercontent.com/s/tp922zulyki6xz7/eventBanner.png?dl=0" alt="upcoming events at Scum banner">
+				<img src="https://dl.dropboxusercontent.com/s/s234r6wfxgloayc/eventBanner.png?dl=0" alt="upcoming events at Scum banner">
 			</div>
+
+			<div class="event-banner">
+				<img src="images/ARCDenverConferencePoster.png" alt="Alliance for Renewal Churches is hosting The Old Guys Dispensing Some Wisdom Conference at Scum of the Earth Church (935 W 11th Ave, Denver, Colorado), Saturday September 10 from 10:00 AM to 4:00 PM. Topics will include 'Passing the Faith and the Church to the Next Generation' (by Mike Sares), 'Traps the Devil Sets for Young Leaders' (by Larry Pambianco), and 'Christian Community -- What is Loving One another Really Supposed to Look like According to Jesus?' (Ned Berube)" />
+			</div>
+
+			<div style='text-align:center;'>NOTE: No Celebrate Recovery meeting on Sept. 5 (Labor Day)</div>
 
 			<h4 class="info-title">upcoming events</h4>
 			<div class="line thin"></div>
@@ -284,12 +294,15 @@
 	  		<div class="article">
 <!--
 					// if needed for below p: ng-class="{'hidden': $last}" ng-if="$index >= 1" 
+
 -->
-					<p ng-repeat="paragraph in jsonData.data.scoop.newest.article track by $index" ng-if="$index==0" class="caption">
+					{{ jsonData.data.scoop.newest.article[0] }}
+					
+					<p ng-repeat="paragraph in jsonData.data.scoop.newest.article track by $index" ng-if="$index>0 && $index<3" class="caption bigger">
 						{{ paragraph }}
 					</p>
 
-	  			<p ng-repeat="paragraph in jsonData.data.scoop.newest.article track by $index" ng-if='$index>=1' ng-class="{'hidden': $index>=22}">
+	  			<p ng-repeat="paragraph in jsonData.data.scoop.newest.article track by $index" ng-if='$index>=3' ng-class="{'hidden': $index>=22}">
 					{{ paragraph }}
 				</p>
 
@@ -301,10 +314,10 @@
 					<p class="space-before">
 						{{jsonData.data.scoop.newest.article[39]}}
 					</p> -->
-
+<!--
 					<div class="img-div">
 						<img ng-src='{{jsonData.data.scoop.newest.images[0]}}' alt="Scum Budget graphic summary" />
-					</div>
+					</div> -->
 				  
 	  		</div>
 	  	</div>
