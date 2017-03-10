@@ -35,6 +35,10 @@
 		max-width: 30em;
 		text-align: center;
 
+		&--small {
+			max-width: 15em;
+		}
+
 		img {
 			width: 100%;
 		}
