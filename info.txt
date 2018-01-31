@@ -1,0 +1,20 @@
+Info
+
+Updates
+========
+- to build in dev mode, run `gulp`
+- to build a production bundle, run `gulp finalBuild`
+
+
+blog
+- hosted on Blogger:
+	* info.scumoftheearth@gmail.com
+	* password: 1corinthians413
+
+
+editing dropbox link:
+- find previous link, replace stuff after /s/
+
+editing scoop:
+- content is in index.html
+- author, title, date are in build/info.json
